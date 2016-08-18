@@ -2,16 +2,17 @@
  * Created by rush on 8/16/16.
  */
 public class Animal {
-    String name;
-    String species;
-    String breed;
-    String description;
+    private String name;
+    private String species;
+    private String breed;
+    private String description;
 
-    Animal() {
+
+    public Animal() {
 
     }
 
-    Animal(String name, String species, String breed, String description){
+    public Animal(String name, String species, String breed, String description){
         this.name = name;
         this.species = species;
         this.breed = breed;
