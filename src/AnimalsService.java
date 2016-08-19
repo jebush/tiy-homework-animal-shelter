@@ -7,24 +7,32 @@ public class AnimalsService {
     private ArrayList<Animal> littleAnimals = new ArrayList<>();
 
 
-    protected ArrayList<Animal> getListAnimals() {
+    public ArrayList<Animal> getListAnimals() {
         return littleAnimals;
     }
 
-    protected void setListAnimals(ArrayList<Animal> animalList) {
-         littleAnimals = animalList;
+    public void addAnimals(Animal animal) {
+         littleAnimals.add(animal);
     }
 
 
-    protected Animal getAnimal(int index) {
+    public Animal getAnimal(int index) {
 
-        return littleAnimals.get(index - 1);
+        try {
+            return littleAnimals.get(index);
+        } catch (IndexOutOfBoundsException e){
+            return null;
+        }
 
     }
 
-    protected Animal removeAnimal(int index) {
+    public void updateAnimal(int index, Animal animal){
+        littleAnimals.add(index, animal);
+    }
 
-        return littleAnimals.remove(index - 1);
+    public Animal removeAnimal(int index) {
+
+        return littleAnimals.remove(index);
 
     }
 

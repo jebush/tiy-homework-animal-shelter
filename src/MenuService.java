@@ -5,6 +5,15 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MenuService {
+
+    //These are the indicators for the main menu
+    public static final int LIST_Animal = 1;
+    public static final int CREATE_Animal = 2;
+    public static final int VIEW_Animal = 3;
+    public static final int EDIT_Animal = 4;
+    public static final int DELETE_Animal = 5;
+    public static final int QUIT = 6;
+
     AnimalsService service = new AnimalsService();
     Scanner scanner = new Scanner(System.in);
 
@@ -42,57 +51,76 @@ public class MenuService {
         return value;
     }
 
+    private String waitForString(String message, boolean needIt) {
+        System.out.println(message);
+
+        String value =  scanner.nextLine();
+
+        if(needIt && value.trim().length() == 0){
+            System.out.println("\nPlease provide a value.\n");
+
+            value = waitForString(message, needIt);
+        }
+
+        return value.trim();
+    }
+
+    private String waitForString(String message, String defaultValue){
+        String value = waitForString(message, false);
+
+        if(value.isEmpty()){
+            return defaultValue;
+        } else {
+            return value;
+        }
+    }
+
+    public int promptForAnimalIndex() {
+        return waitForInt("What is the numeric ID of the animal you want to view?: ");
+    }
+
+    public int promptForAnimalIndex(String message) {
+        return waitForInt(message);
+    }
+
     //
-    public void listAnimals() {
+    public void listAnimals(ArrayList<Animal> littleAnimals) {
         System.out.println("\n-- List of animals --\n");
 
-        //This creates an new instance of a array by getting the array from AnimalsService
-        ArrayList<Animal> littleAnimals = service.getListAnimals();
-
-        for (int x = 0; x < littleAnimals.size(); x++) {
-            Animal ani = littleAnimals.get(x);
-            System.out.println((x + 1) + ")" + ani.getName() + "        " + ani.getSpecies() + " \n");
+        if (littleAnimals.size() == 0){
+            System.out.println("There are no animals. Please create one.");
+        } else {
+            for (int x = 0; x < littleAnimals.size(); x++) {
+                Animal ani = littleAnimals.get(x);
+                System.out.println((x) + ")" + ani.getName() + "        " + ani.getSpecies() + " \n");
+            }
         }
 
-
     }
 
-    public void createAnimal() {
-
-        Animal myAnimal = new Animal();
-
-        //This creates an new instance of a array by getting the array from AnimalsService
-        ArrayList<Animal> littleAnimals = service.getListAnimals();
+    public Animal createAnimal() {
+        System.out.println("\n-- Create a Animal -- \n");
 
 
-        System.out.println("Animal Name: ");
-        String name = scanner.nextLine();
-        myAnimal.setName(name);
+        String name = waitForString(("Animal Name: "), true);
 
-        System.out.println("Species: ");
-        String species = scanner.nextLine();
-        myAnimal.setSpecies(species);
 
-        System.out.println("Breed (optional): ");
-        String breed = scanner.nextLine();
-        myAnimal.setBreed(breed);
+        String species = waitForString(("Species: "), true);
 
-        System.out.println("Description: ");
-        String description = scanner.nextLine();
-        myAnimal.setDescription(description);
-        littleAnimals.add(myAnimal);
-        service.setListAnimals(littleAnimals);
+
+
+        String breed = waitForString(("Breed (optional): "), false);
+
+
+
+        String description = waitForString(("Description: "), true);
+
+        return new Animal(name, species, breed, description);
     }
 
-    public void getAnimal() {
-        System.out.println("What is the numeric ID of the animal you want to view?: ");
+    public void displayAnimal(Animal myAnimal) {
 
-        //This scans in the number
-        int numIndex = scanner.nextInt();
-
-        Animal myAnimal = service.getAnimal(numIndex);
-
-
+        //This displays the Animal data
         System.out.println("Name: " + myAnimal.getName());
         System.out.println("Species: " + myAnimal.getSpecies());
         System.out.println("Breed: " + myAnimal.getBreed());
@@ -100,72 +128,73 @@ public class MenuService {
 
     }
 
-    public void editAnimal() {
-        System.out.println("What is the numeric ID of the animal you want to edit?: ");
-        int numIndex = scanner.nextInt();
-
-        Animal myAnimal = service.getAnimal(numIndex);
-
-        System.out.println("Animal Name [" + myAnimal.getName() + "]: ");
-        if (scanner.hasNextLine()) {
-            String name = scanner.nextLine();
-            myAnimal.setName(name);
-        } else {
-
-        }
-
-        System.out.println("Species [" + myAnimal.getSpecies() + "]: ");
-        if (scanner.hasNextLine()) {
-            String species = scanner.nextLine();
-            myAnimal.setSpecies(species);
-        } else {
-
-        }
-
-        System.out.println("Breed (optional) [" + myAnimal.getBreed() + "]: ");
-        if (scanner.hasNextLine()) {
-            String breed = scanner.nextLine();
-            myAnimal.setBreed(breed);
-        } else {
-
-        }
-
-        System.out.println("Description [" + myAnimal.getDescription() + "]: ");
-        if (scanner.hasNextLine()) {
-            String description = scanner.nextLine();
-            myAnimal.setDescription(description);
-
-        } else {
-
-        }
+    public void displayNoAnimal(){
+        System.out.println("Sorry, that animal does not exist");
     }
 
-    public void delAnimal() {
-        System.out.println("What is the numeric ID of the animal you want to delete?: ");
-
-        int index = scanner.nextInt();
-
-        Animal myAnimal = service.getAnimal(index);
-
-        System.out.println("Name: " + myAnimal.getName());
-        System.out.println("Species: " + myAnimal.getSpecies());
-        System.out.println("Breed: " + myAnimal.getBreed());
-        System.out.println("Description: " + myAnimal.getDescription());
+    public Animal editAnimal(Animal animal) {
+        System.out.println("\n-- Edit a Animal -- \n");
 
 
-        try {
-            System.out.println("Are you sure you wan to delete this animal?: ");
-            String deleteIT = scanner.nextLine();
+        String name = waitForString(
+                String.format("Animal Name [%s]: ", animal.getName()),
+                animal.getName());
 
-            deleteIT = "yes";
 
-            System.out.println("Success: The animal has been deleted!");
-            service.removeAnimal(index);
+        String species = waitForString(
+                String.format("Species [%s]: ", animal.getSpecies()),
+                animal.getSpecies());
 
-        } catch (Exception e) {
-            System.out.println("\nPlease provide a number.\n");
 
+
+        String breed = waitForString(
+                String.format("Breed [%s]: ", animal.getBreed()),
+                animal.getBreed());
+
+
+
+        String description = waitForString(
+                String.format("Description [%s]: ", animal.getDescription()),
+                animal.getDescription());
+
+        System.out.println("Success: The animal has been updated");
+
+        return new Animal(name, species, breed, description);
+
+    }
+
+    private String deleteAnimalString(String message, boolean needIt) {
+        System.out.println(message);
+
+        String value =  scanner.nextLine();
+
+        if(needIt && value.trim().length() == 0){
+            System.out.println("\nPlease provide a value.\n");
+
+            value = waitForString(message, needIt);
         }
+
+        return value.trim();
+    }
+
+    public void delAnimal(Animal animal) {
+
+        while (true) {
+            String deleteIT = waitForString("Are you sure you want to delete this animal?(yes/no): ", true);
+
+            if (deleteIT.equals("yes")) {
+                System.out.println("Success: The animal has been deleted!");
+                break;
+
+            } else if (deleteIT.equals("no")) {
+
+                break;
+            } else {
+                System.out.println("Please put yes or no!: ");
+            }
+        }
+
+
     }
 }
 

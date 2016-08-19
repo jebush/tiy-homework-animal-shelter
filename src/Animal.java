@@ -19,35 +19,35 @@ public class Animal {
         this.description = description;
     }
 
-    protected String getName(){
+    public String getName(){
         return this.name;
     }
 
-    protected void setName(String name){
+    public void setName(String name){
         this.name = name;
     }
 
-    protected String getSpecies(){
+    public String getSpecies(){
         return this.species;
     }
-    protected void setSpecies(String species){
+    public void setSpecies(String species){
         this.species = species;
     }
 
-    protected String getBreed(){
+    public String getBreed(){
         return this.breed;
     }
 
-    protected void setBreed(String breed){
+    public void setBreed(String breed){
         this.breed = breed;
 
     }
 
-    protected String getDescription(){
+    public String getDescription(){
         return this.description;
     }
 
-    protected void setDescription(String description){
+    public void setDescription(String description){
         this.description = description;
     }
 
