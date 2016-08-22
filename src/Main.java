@@ -62,22 +62,22 @@ public class Main {
 
             }else if(action == MenuService.DELETE_Animal){
 
-                while (true) {
-                    // gets index of animal
-                    int index = menuService.promptForAnimalIndex("Please select the animal you want to delete: ");
 
-                    //This pulls the animal down off the list
-                    Animal animal = animalsService.getAnimal(index);
+              //  // gets index of animal
+              //  int index = menuService.promptForAnimalIndex("Please select the animal you want to delete: ");
+//
+              //  //This pulls the animal down off the list
+              //  Animal animal = animalsService.getAnimal(index);
+//
+              //  menuService.displayAnimal(animal);
 
-                    menuService.displayAnimal(animal);
+                menuService.delAnimal();
 
-                    menuService.delAnimal(animal);
-                }
 
 
             }else if(action == MenuService.QUIT){
                 // quits out of the loop
-                break;
+                menuService.quit();
 
             } else {
                 System.out.println("Error: Sorry, That isn't a valid option");

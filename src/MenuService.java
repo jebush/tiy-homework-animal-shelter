@@ -3,6 +3,7 @@
  */
 import java.util.ArrayList;
 import java.util.Scanner;
+import static java.lang.System.exit;
 
 public class MenuService {
 
@@ -14,7 +15,11 @@ public class MenuService {
     public static final int DELETE_Animal = 5;
     public static final int QUIT = 6;
 
+
+    //Probally need to take out
     AnimalsService service = new AnimalsService();
+
+    //This is my scanner
     Scanner scanner = new Scanner(System.in);
 
 
@@ -177,24 +182,53 @@ public class MenuService {
         return value.trim();
     }
 
-    public void delAnimal(Animal animal) {
+    public void delAnimal() {
+        int index = promptForAnimalIndex("Please select the animal you want to delete: ");
+        int arraySize = service.getListAnimals().size();
 
-        while (true) {
+        if (index <= arraySize){
+            //This pulls the animal down off the list
+            Animal animal = service.getAnimal(index);
+
+            displayAnimal(animal);
+
             String deleteIT = waitForString("Are you sure you want to delete this animal?(yes/no): ", true);
 
-            if (deleteIT.equals("yes")) {
-                System.out.println("Success: The animal has been deleted!");
-                break;
+            switch (deleteIT) {
+                case "yes":
+                    System.out.println("Goodbye!");
+                    service.removeAnimal(index);
+                    break;
+                case "no":
+                    delAnimal();
+                    break;
 
-            } else if (deleteIT.equals("no")) {
-
-                break;
-            } else {
-                System.out.println("Please put yes or no!: ");
+                default:
+                    System.out.println("Try Again!");
+                    delAnimal();
             }
+        } else {
+            System.out.println("Try Again! Pick an animal on the list!");
+            delAnimal();
         }
+    }
 
+    public void quit(){
+        System.out.println("--- Quit ---");
 
+        String quitIt = waitForString("Are you sure you want to quit?(yes/no): ", true);
+
+        switch (quitIt) {
+            case "yes":
+                System.out.println("Goodbye!");
+                exit(0);
+                break;
+            case "no":
+                break;
+            default:
+                System.out.println("You need to try harder than that! Try Again!");
+                quit();
+        }
     }
 }
 
