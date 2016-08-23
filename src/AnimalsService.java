@@ -6,6 +6,10 @@ public class AnimalsService {
 
     private ArrayList<Animal> littleAnimals = new ArrayList<>();
 
+    public AnimalsService(){
+
+    }
+
 
     public ArrayList<Animal> getListAnimals() {
         return littleAnimals;

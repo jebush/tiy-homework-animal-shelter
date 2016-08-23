@@ -17,7 +17,7 @@ public class MenuService {
 
 
     //Probally need to take out
-    AnimalsService service = new AnimalsService();
+    AnimalsService animalService = new AnimalsService();
 
     //This is my scanner
     Scanner scanner = new Scanner(System.in);
@@ -174,7 +174,7 @@ public class MenuService {
         String value =  scanner.nextLine();
 
         if(needIt && value.trim().length() == 0){
-            System.out.println("\nPlease provide a value.\n");
+            System.out.println("\nPlease provide a yes/no.\n");
 
             value = waitForString(message, needIt);
         }
@@ -182,36 +182,102 @@ public class MenuService {
         return value.trim();
     }
 
-    public void delAnimal() {
-        int index = promptForAnimalIndex("Please select the animal you want to delete: ");
-        int arraySize = service.getListAnimals().size();
+    public void delAnimal(ArrayList<Animal> animal) {
 
-        if (index <= arraySize){
-            //This pulls the animal down off the list
-            Animal animal = service.getAnimal(index);
+        System.out.println("----- Delete Animal -----");
+        int index = promptForAnimalIndex("What is the animal you want to Delete?");
 
-            displayAnimal(animal);
+        int arraySize = animal.size();
 
-            String deleteIT = waitForString("Are you sure you want to delete this animal?(yes/no): ", true);
+        Animal myAnimal = animalService.getAnimal(index);
+
+        System.out.println(myAnimal);
+
+        if (index < arraySize) {
+
+            String deleteIT = scanner.nextLine();
 
             switch (deleteIT) {
                 case "yes":
-                    System.out.println("Goodbye!");
-                    service.removeAnimal(index);
+                    animalService.removeAnimal(index);
+                    System.out.println("Goodbye Deletion is successful!");
+
                     break;
                 case "no":
-                    delAnimal();
+                    System.out.println("You canceled the deletion.");
+                    delAnimal(animal);
+
                     break;
 
                 default:
                     System.out.println("Try Again!");
-                    delAnimal();
             }
         } else {
-            System.out.println("Try Again! Pick an animal on the list!");
-            delAnimal();
+            delAnimal(animal);
         }
+    //   if (deleteIT.equals("yes")){
+    //       System.out.println("Goodbye!");
+    //       deleteAni = true;
+    //       return deleteAni;
+    //   }else if (deleteIT.equals("no")){
+    //       deleteAni = false;
+    //       return deleteAni;
+    //   }else {
+    //       System.out.println("Try again yes or no!");
+    //       delAnimal();
+    //       return deleteAni;
+    //   }
+
     }
+
+    public boolean deleteAnimal(){
+        String deleteIT = waitForString("Do you want to delete this animal?(yes/no)", true);
+        boolean deleteAni = false;
+        if (deleteIT.equals("yes")){
+                 System.out.println("Success you deleted the animal!");
+                 deleteAni = true;
+                 return deleteAni;
+             }else if (deleteIT.equals("no")){
+                 deleteAni = false;
+                 return deleteAni;
+             }else {
+                 System.out.println("Try again yes or no!");
+                 deleteAnimal();
+                return deleteAni;
+             }
+    }
+    private int waitForIntDelete(String message) {
+
+
+        //verify animal records exist first
+        ArrayList<Animal> animal = animalService.getListAnimals();
+        int arraySize = animal.size();
+        if (arraySize > 2) {
+            System.out.printf("[0] total animal(s) are on record.\n");
+            return -1;
+        }
+
+
+        //interface with user
+        System.out.println(message);
+        String input = scanner.nextLine();
+
+        //process input
+        int value;
+        try {
+            value = Integer.parseInt(input);
+        } catch (Exception e) {
+            System.out.printf("Please try again, \"%s\" is not a valid number!\n", input);
+            value = waitForInt(message);
+        }
+        if ((value < 0) ||
+                ((value > animalService.getListAnimals().size()))) {
+            System.out.printf("Please try again. \"%s\" is not a valid number!\n", input);
+            value = waitForInt(message);
+        }
+        return value;
+    }
+
 
     public void quit(){
         System.out.println("--- Quit ---");

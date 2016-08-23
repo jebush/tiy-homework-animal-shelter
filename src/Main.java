@@ -61,17 +61,60 @@ public class Main {
 
 
             }else if(action == MenuService.DELETE_Animal){
+               // // gets the ArrayList from AnimalsService
+               // ArrayList<Animal> animal = animalsService.getListAnimals();
+               // menuService.delAnimal(animal);
+
+               // //Works but there is no condition logic behind it
+               // int index = menuService.promptForAnimalIndex("Please select the animal you want to delete: ");
+
+               // if (index <= animal.size()) {
+               //     animalsService.removeAnimal(index);
+               // }
+
+                // gets index of animal
+                int index = menuService.promptForAnimalIndex("What is the numeric ID of the animal you want to Delete?");
+
+                Animal animal = animalsService.getAnimal(index);
 
 
-              //  // gets index of animal
-              //  int index = menuService.promptForAnimalIndex("Please select the animal you want to delete: ");
-//
-              //  //This pulls the animal down off the list
-              //  Animal animal = animalsService.getAnimal(index);
-//
-              //  menuService.displayAnimal(animal);
 
-                menuService.delAnimal();
+                if (animal != null) {
+
+                    menuService.displayAnimal(animal);
+                    boolean delete = menuService.deleteAnimal();
+
+                    if (delete){
+                        animalsService.removeAnimal(index);
+                    } else if (!delete){
+
+                    }
+
+                } else {
+                    menuService.displayNoAnimal();
+                }
+
+                // gets index of animal
+            //   int index = menuService.promptForAnimalIndex("Please select the animal you want to delete: ");
+
+            //   //This pulls the animal down off the list
+            //   Animal animal = animalsService.getAnimal(index);
+
+            //   // gets the ArrayList from AnimalsService
+            //   ArrayList<Animal> myAnimal = animalsService.getListAnimals();
+
+            //   int arraySize = myAnimal.size();
+
+            //   if (index <= arraySize) {
+
+            //       menuService.displayAnimal(animal);
+
+            //       menuService.delAnimal();
+            //       animalsService.removeAnimal(index);
+            //   } else {
+            //       break;
+
+            //   }
 
 
 
