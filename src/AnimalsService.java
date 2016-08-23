@@ -14,6 +14,9 @@ public class AnimalsService {
     public ArrayList<Animal> getListAnimals() {
         return littleAnimals;
     }
+    public int countOfAnimals(){
+        return littleAnimals.size();
+    }
 
     public void addAnimals(Animal animal) {
          littleAnimals.add(animal);
