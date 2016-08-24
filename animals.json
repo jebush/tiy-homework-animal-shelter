@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Dude",
+    "species": "Bird",
+    "breed": "Parrot",
+    "description": "Swears like a sailor"
+  },
+  {
+    "name": "Bubba",
+    "species": "1",
+    "breed": "2",
+    "description": "fds"
+  },
+  {
+    "name": "Tony",
+    "species": "Ardvarrk",
+    "breed": "",
+    "description": "Is crusty brown"
+  },
+  {
+    "name": "Roger",
+    "species": "Alien",
+    "breed": "",
+    "description": "Lives many different live and has many costumes to do so."
+  },
+  {
+    "name": "Thing",
+    "species": "Rock",
+    "breed": "duh",
+    "description": "IS cold"
+  }
+]
