@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a724cdb4-1b5e-4b53-ac91-91c63ab950fb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tiy-homework-animal-shelter/AnimalRepository.class" afterPath="$PROJECT_DIR$/out/production/tiy-homework-animal-shelter/AnimalRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tiy-homework-animal-shelter.iml" afterPath="$PROJECT_DIR$/tiy-homework-animal-shelter.iml" />
-    </list>
+    <list default="true" id="a724cdb4-1b5e-4b53-ac91-91c63ab950fb" name="Default" comment="" />
     <ignored path="tiy-homework-animal-shelter.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -129,8 +125,8 @@
       <file leaf-file-name="animalServiceTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/animalServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="330">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -851,7 +847,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1471375805540</updated>
-      <workItem from="1471375809427" duration="111876000" />
+      <workItem from="1471375809427" duration="111937000" />
     </task>
     <servers />
   </component>
@@ -882,7 +878,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111876000" />
+    <option name="totallyTimeSpent" value="111937000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="468" y="23" width="972" height="805" extended-state="0" />
@@ -1088,8 +1084,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/animalServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        <state relative-caret-position="330">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
