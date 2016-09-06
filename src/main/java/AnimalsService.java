@@ -14,14 +14,9 @@ public class AnimalsService {
 
     private AnimalTypeRepository animalTypeRepository;
 
-    public AnimalsService(AnimalRepository animalRepository){
+    public AnimalsService(AnimalRepository animalRepository, AnimalTypeRepository animalTypeRepository){
         this.animalRepository = animalRepository;
-
-    }
-
-    public AnimalsService(AnimalTypeRepository animalTypeRepository){
         this.animalTypeRepository = animalTypeRepository;
-
     }
 
     public ArrayList<Animal> getListAnimals() throws SQLException {
@@ -89,15 +84,15 @@ public class AnimalsService {
         return littleAnimals;
     }
 
-    public ArrayList<AnimalType> getListAnimalType() throws SQLException {
+    public ArrayList<Animal> getListAnimalType() throws SQLException {
         ResultSet resultSet = animalTypeRepository.listAnimalType();
 
         // new arraylist of animal type, empty by default
-        ArrayList<AnimalType> littleAnimals = new ArrayList<>();
+        ArrayList<Animal> littleAnimals = new ArrayList<>();
 
-        // loop over our peeps
+        // loop over our animal types
         while(resultSet.next()){
-            AnimalType animalType = new AnimalType(
+            Animal animalType = new Animal(
                     resultSet.getInt("animaltypesid"),
                     resultSet.getString("animaltype")
             );
@@ -108,14 +103,24 @@ public class AnimalsService {
         return littleAnimals;
     }
 
+    public void addAnimalType(Animal animalType) throws SQLException {
+        animalTypeRepository.addAnimalType(animalType);
+    }
 
-    //
+
+    public void removeAnimal(int index) throws SQLException {
+        this.animalRepository.removeAnimal(index);
+
+    }
+
+    public void updateAnimal(Animal animal) throws SQLException {
+        animalRepository.updateAnimal(animal);
+    }
+
+
     //Need to change the below
     //
 
-    public int countOfAnimals(){
-        return animalRepository.countOfAnimals();
-    }
 //
     public void addAnimals(Animal animal) throws SQLException {
         animalRepository.addAnimals(animal);
@@ -132,15 +137,7 @@ public class AnimalsService {
 //
  //   }
 
-    public void updateAnimal(int index, Animal animal) throws IOException{
-        animalRepository.updateAnimal(index, animal);
-    }
 
-    public void removeAnimal(int index) throws IOException {
-
-        animalRepository.removeAnimal(index);
-
-    }
 
 
 

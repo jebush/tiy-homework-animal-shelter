@@ -11,10 +11,6 @@ public class AnimalRepositoryImpl implements AnimalRepository {
     //Provides a connection?
     private Connection conn;
 
-    //private final Path pathToFile;
-//
-    //private final Gson gson;
-
     private ArrayList<Animal> littleAnimals = new ArrayList<>();
 
     public AnimalRepositoryImpl(String jdbcUrl) throws SQLException {
@@ -24,7 +20,7 @@ public class AnimalRepositoryImpl implements AnimalRepository {
     @Override
     public ResultSet listAnimals() throws SQLException {
         Statement stmt = this.conn.createStatement();
-        return stmt.executeQuery("SELECT * FROM animal");
+        return stmt.executeQuery("SELECT * FROM animal ORDER BY animalid");
     }
 
     @Override
@@ -59,26 +55,36 @@ public class AnimalRepositoryImpl implements AnimalRepository {
         stmt.execute();
     }
 
+    @Override
+    public void removeAnimal(int index) throws SQLException {
+        PreparedStatement stmt = this.conn.prepareStatement("DELETE FROM animal WHERE animalid = ?");
+
+        stmt.setInt(1, index);
+
+        stmt.executeUpdate();
+
+    }
+
+    @Override
+    public void updateAnimal(Animal animal) throws SQLException {
+        PreparedStatement stmt = this.conn.prepareStatement("UPDATE animal SET name = ?, species = ?, breed = ?, description = ? WHERE animalid = ?");
+
+        stmt.setString(1, animal.getName());
+        stmt.setString(2, animal.getSpecies());
+        stmt.setString(3, animal.getBreed());
+        stmt.setString(4, animal.getDescription());
+        stmt.setInt(5, animal.getAnimalID());
+
+        stmt.executeUpdate();
+    }
 
     //
     //Need to change over
     //
 
-    @Override
-    public void updateAnimal(int index, Animal animal) throws IOException{
-        littleAnimals.add(index, animal);
-
-
-    }
-
-    @Override
-    public void removeAnimal(int index) throws IOException{
-
-        littleAnimals.remove(index);
 
 
 
-    }
     @Override
     public int countOfAnimals(){
         return littleAnimals.size();

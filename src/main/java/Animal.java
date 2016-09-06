@@ -11,6 +11,11 @@ public class Animal {
     private String breed;
     private String description;
 
+    private int animalTypeId;
+    private String animalType;
+
+
+
     //The below needs to be an arraylist for notes
     private ArrayList<Note> notes = new ArrayList<>();
 
@@ -27,6 +32,14 @@ public class Animal {
 
     }
 
+    public Animal(String name, String species, String breed, String description){
+        this.name = name;
+        this.species = species;
+        this.breed = breed;
+        this.description = description;
+
+    }
+
     public Animal(int animalid, String name, String species, String breed, String description){
         this.animalid = animalid;
         this.name = name;
@@ -34,6 +47,15 @@ public class Animal {
         this.breed = breed;
         this.description = description;
 
+    }
+
+    public Animal(int animalTypeId, String animalType){
+        this.animalTypeId = animalTypeId;
+        this.animalType = animalType;
+    }
+
+    public Animal(String type) {
+        this.animalType = type;
     }
 
     public String getName(){
@@ -82,4 +104,28 @@ public class Animal {
         this.animalid = animalid;
     }
 
+    public ArrayList<Note> getNotes() {
+        return notes;
+    }
+
+    public void setNotes(ArrayList<Note> notes) {
+        this.notes = notes;
+    }
+
+    //For Animal Types
+    public int getAnimalTypeId(){
+        return this.animalTypeId;
+    }
+
+    public void setAnimaTypeId(int animalTypeId){
+        this.animalTypeId = animalTypeId;
+    }
+
+    public String getAnimalType(){
+        return this.animalType;
+    }
+
+    public void setAnimalType(String animalType){
+        this.animalType = animalType;
+    }
 }

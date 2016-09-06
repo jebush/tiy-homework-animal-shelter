@@ -13,9 +13,29 @@ public class MenuService {
     public static final int Manage_AnimalTypes = 3;
     public static final int QUIT = 4;
 
+    //This is the menu callers for Animal Search
+    public static final int TYPE = 1;
+    public static final int NAME = 2;
+    public static final int ID = 3;
+    public static final int ALL_Animals = 4;
+    public static final int RETURN_Main_Menu = 5;
+
+
+    //This is the menu callers for Animal Manage
+    public static final int EDIT_Animal = 1;
+    public static final int DELETE_Animal = 2;
+    public static final int ADD_Note = 3;
+    public static final int RETURN_Menu = 4;
+
+    //This is the menu callers for Animal Type Manage
+    public static final int View_Animal_Type = 1;
+    public static final int Add_Animal_Type = 2;
+    public static final int RETURN_To_Menu = 3;
 
     //This is my scanner
     Scanner scanner = new Scanner(System.in);
+
+
 
 
     public int promptForMainMenuSelection() {
@@ -29,17 +49,39 @@ public class MenuService {
         return waitForInt("Please choose an option:");
     }
 
-    public int promptFoAnimalSearch() {
+    public int promptForAnimalSearch() {
         System.out.println("\n-- Search for animals --\n" +
                 "\n" +
                 "1) Type\n" +
                 "2) Name\n" +
                 "3) ID\n" +
                 "4) All animals\n" +
-                "5) Return to Menu\n");
+                "5) Return to Main Menu\n");
 
         return waitForInt("How do you wish to search? ");
     }
+
+    public int promptForAnimalManage() {
+        System.out.println("\n-- Please Select an Option --\n" +
+                "\n" +
+                "1) Edit Animal\n" +
+                "2) Delete animal\n" +
+                "3) Add note\n" +
+                "4) Return to Previous Menu\n");
+
+        return waitForInt("What do you want to do? ");
+    }
+
+    public int promptForAnimalTypeManage() {
+        System.out.println("\n-- Please Select an Option --\n" +
+                "\n" +
+                "1) View Animal Types\n" +
+                "2) Add Animal Type\n" +
+                "3) Return to Main Menu\n");
+
+        return waitForInt("What do you want to do? ");
+    }
+
 
     private int waitForInt(String message) {
 
@@ -123,28 +165,43 @@ public class MenuService {
 
     }
 
-    public void listAnimalType(ArrayList<AnimalType> littleAnimals) {
+    public void listAnimalType(ArrayList<Animal> littleAnimals) {
         System.out.println("\n-- List of animals --\n");
 
         if (littleAnimals.size() == 0){
             System.out.println("There are no animals. Please create one.");
         } else {
             for (int x = 0; x < littleAnimals.size(); x++) {
-                AnimalType ani = littleAnimals.get(x);
+                Animal ani = littleAnimals.get(x);
                 System.out.println(ani.getAnimalTypeId() + ")" + ani.getAnimalType() + " \n");
             }
         }
-
     }
 
-  public Animal createAnimal() {
+    public String listAnimalTypeAsString(ArrayList<Animal> littleAnimals) {
+        String result = "";
+
+        if (littleAnimals.size() == 0){
+            System.out.println("There are no animals. Please create one.");
+        } else {
+            for (int i = 0; i < littleAnimals.size(); i++) {
+                Animal ani = littleAnimals.get(i);
+                result = result + ani.getAnimalType() + " ";
+            }
+        }
+        return "(" + result.trim() + ")";
+    }
+
+  public Animal createAnimal(ArrayList<Animal> animalType) {
+
       System.out.println("\n-- Create a Animal -- \n");
 
 
       String name = waitForString(("Animal Name: "), true);
 
 
-      int species = waitForInt(("Species: "));
+      System.out.print(listAnimalTypeAsString(animalType));
+      String species = waitForString(("Species: "), true);
 
 
 
@@ -183,36 +240,27 @@ public class MenuService {
         System.out.println("Sorry, that animal does not exist");
     }
 
-  //  public Animal editAnimal(Animal animal) {
-  //      System.out.println("\n-- Edit a Animal -- \n");
-//
-//
-  //      String name = waitForString(
-  //              String.format("Animal Name [%s]: ", animal.getName()),
-  //              animal.getName());
-//
-//
-  //      String species = waitForString(
-  //              String.format("Species [%s]: ", animal.getSpecies()),
-  //              animal.getSpecies());
-//
-//
-//
-  //      String breed = waitForString(
-  //              String.format("Breed [%s]: ", animal.getBreed()),
-  //              animal.getBreed());
-//
-//
-//
-  //      String description = waitForString(
-  //              String.format("Description [%s]: ", animal.getDescription()),
-  //              animal.getDescription());
-//
-  //      System.out.println("Success: The animal has been updated");
-//
-  //      return new Animal(name, species, breed, description);
-//
-  //  }
+    public Animal updateAnimal(Animal animal) {
+        System.out.println("\n-- Edit a Animal -- \n");
+
+        String name = waitForString(String.format("Animal Name [%s]: ", animal.getName()), animal.getName());
+
+        String species = waitForString(String.format("Species [%s]: ", animal.getSpecies()), animal.getSpecies());
+
+
+        String breed = waitForString(String.format("Breed [%s]: ", animal.getBreed()), animal.getBreed());
+
+
+        String description = waitForString(String.format("Description [%s]: ", animal.getDescription()), animal.getDescription());
+        System.out.println("Success: The animal has been updated");
+        return new Animal(name, species, breed, description);
+    }
+
+    public Animal addAnimalType(){
+        String type = waitForString("Add new animal type: ", true);
+
+        return new Animal(type);
+    }
 
 
     public boolean deleteAnimal(){

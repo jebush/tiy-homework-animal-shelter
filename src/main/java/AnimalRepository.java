@@ -15,9 +15,9 @@ public interface AnimalRepository {
 
     ResultSet getSpecificAnimal(int index) throws SQLException;
 
-    void updateAnimal(int index, Animal animal) throws IOException;
+    void removeAnimal(int index) throws SQLException;
 
-    void removeAnimal(int index) throws IOException;
+    void updateAnimal(Animal animal) throws SQLException;
 
     int countOfAnimals();
 }
