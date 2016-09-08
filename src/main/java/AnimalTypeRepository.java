@@ -21,6 +21,15 @@ public class AnimalTypeRepository {
         Statement stmt = this.conn.createStatement();
         return stmt.executeQuery("SELECT animaltype FROM animaltypes");
     }
+    public ResultSet listAllAnimalsByType(String type) throws SQLException {
+
+        int speciesId = getTypeIDByName(type);
+
+        PreparedStatement stmt2 = this.conn.prepareStatement("SELECT * FROM animal WHERE species = ?");
+        stmt2.setInt(1, speciesId);
+        return stmt2.executeQuery();
+    }
+
 
     public void addAnimalType(Animal animalType) throws SQLException {
         PreparedStatement stmt = this.conn.prepareStatement("INSERT INTO animaltypes (\"animaltype\") VALUES (?);\n");
@@ -46,15 +55,15 @@ public class AnimalTypeRepository {
     }
 
     protected int getTypeIDByName(String type) throws SQLException{
-        int returnInt = -1;
+        int returnTypeId = -1;
         //Parameter/Sanitized SQL query
-        PreparedStatement stmt = this.conn.prepareStatement("SELECT * FROM animaltypes WHERE animaltypesid = ?");
+        PreparedStatement stmt = this.conn.prepareStatement("SELECT * FROM animaltypes WHERE animaltype = ?");
         stmt.setString(1, type);
-        ResultSet intResult = stmt.executeQuery();
-        if(intResult.next()) {
-            returnInt = ((Number)intResult.getObject(1)).intValue();
+        ResultSet typeIdResult = stmt.executeQuery();
+        if(typeIdResult.next()) {
+            returnTypeId = ((Number)typeIdResult.getObject(1)).intValue();
         }
-        return returnInt;
+        return returnTypeId;
     }
 
 

@@ -166,8 +166,9 @@ public class MenuService {
     }
 
 
-    //
-    public void listAnimals(ArrayList<Animal> littleAnimals) {
+    //TODO
+    //Need to get it to display the species animal type
+    public void listAnimals(ArrayList<Animal> littleAnimals) throws SQLException {
         System.out.println("\n-- List of animals --\n");
 
         if (littleAnimals.size() == 0){
@@ -175,7 +176,10 @@ public class MenuService {
         } else {
             for (int x = 0; x < littleAnimals.size(); x++) {
                 Animal ani = littleAnimals.get(x);
-                System.out.println(ani.getAnimalID() + ")" + ani.getName() + "        " + ani.getSpecies() + " \n");
+
+                //The error occurs here
+                //TODO
+                System.out.println(ani.getAnimalID() + " )" + ani.getName() + "        " + animalsService.getSpecificAnimalType(ani.getSpecie()) + " \n");
             }
         }
 
@@ -212,7 +216,7 @@ public class MenuService {
         return "(" + result.trim() + ")";
     }
 
-  public Animal createAnimal(ArrayList<Animal> animalType) {
+  public Animal createAnimal(ArrayList<Animal> animalType) throws SQLException {
 
       System.out.println("\n-- Create a Animal -- \n");
 
@@ -220,9 +224,10 @@ public class MenuService {
       String name = waitForString(("Animal Name: "), true);
 
 
-      System.out.print(listAnimalTypeAsString(animalType));
-      String species = waitForString(("Species: "), true);
+      String result = listAnimalTypeAsString(animalType);
+      System.out.print(result);
 
+      int specie = getAnimalTypesToCreateUpdate();
 
       String breed = waitForString(("Breed (optional): "), false);
 
@@ -230,7 +235,7 @@ public class MenuService {
 
       String description = waitForString(("Description: "), true);
 
-      return new Animal(name, species, breed, description);
+      return new Animal(name, specie, breed, description);
   }
 
     public void displayAnimal(ArrayList<Animal> littleAnimals) throws SQLException {
@@ -257,11 +262,15 @@ public class MenuService {
         System.out.println("Sorry, that animal does not exist");
     }
 
-    public Animal updateAnimal(Animal animal) throws SQLException {
+    public Animal updateAnimal(Animal animal, ArrayList<Animal> animalType) throws SQLException {
         System.out.println("\n-- Edit a Animal -- \n");
 
         String name = waitForString(String.format("Animal Name [%s]: ", animal.getName()), animal.getName());
 
+
+        //TODO
+        String result = listAnimalTypeAsString(animalType);
+        System.out.print(result);
         int species = waitForInt(String.format("Species [%s]: ", animalsService.getSpecificAnimalType(animal.getSpecie())));
 
 
@@ -342,6 +351,22 @@ public class MenuService {
                 System.out.println("Date: " + myAnimalNotes.getDate());
             }
         }
+    }
+
+    //This is a prompt to get the animal type. Will force you to pick off known list of types
+    public int getAnimalTypesToCreateUpdate() throws SQLException {
+
+        String species = waitForString(("Species: "), true);
+
+
+        int specieType = animalsService.getTypeIDByName(species);
+
+        if ((specieType) == -1) {
+            System.out.println("Please select animal off the list");
+            getAnimalTypesToCreateUpdate();
+        }
+
+        return specieType;
     }
 
 }

@@ -18,16 +18,15 @@ public class MainService {
         this.animalsService = animalsService;
     }
 
-    public void manageAnimal(Animal animal, ArrayList<Animal> animalList, int index) throws SQLException {
+    public void manageAnimal(Animal animal, ArrayList<Animal> animalList, int index, ArrayList<Animal> animalType) throws SQLException {
         while (true) {
 
             int action = menuService.promptForAnimalManage();
 
             if (action == MenuService.EDIT_Animal) {
 
-
                 if (animal != (null)) {
-                    animal = menuService.updateAnimal(animal);
+                    animal = menuService.updateAnimal(animal, animalType);
 
                     //The below system outs are a test
                     System.out.println(animal.getAnimalID());
@@ -61,7 +60,6 @@ public class MainService {
                 }
 
             } else if (action == MenuService.ADD_Note) {
-                //Creates the note but errors with a null pointer exception and shuts program down
                 Note note = menuService.addNote();
                 animalsService.addNote(index, note);
 

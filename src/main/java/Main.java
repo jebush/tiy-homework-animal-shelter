@@ -38,6 +38,41 @@ public class Main {
 
 
                     if(action2 == MenuService.TYPE){
+                        //The following get the arraylist of animal types
+                        ArrayList<Animal> animalType = animalsService.getListAnimalType();
+
+                        String result = menuService.listAnimalTypeAsString(animalType);
+                        System.out.print(result);
+                        System.out.println();
+
+                        //The following searches by animal type name
+                        String name = menuService.waitForString2("What is the Animal Type you want to search?", true);
+
+                        ArrayList<Animal> animals = animalsService.getListByAnimalType(name);
+
+                        //This makes sure there is the animal they are searching exists
+                        if (!(animals.isEmpty())) {
+
+                            //This lists all animals returned by the search
+                            menuService.listAnimals(animals);
+                            int index = menuService.promptForAnimalIndex();
+                            ArrayList<Animal> animal = animalsService.getAnimalById(index);
+                            if (!(animal.isEmpty())) {
+                                menuService.displayAnimal(animal);
+                                Animal realTinyAnimal = animalsService.getAnimal(index);
+
+                                //The following get the arraylist of animal types
+                                ArrayList<Animal> animalTypes = animalsService.getListAnimalType();
+
+                                mainService.manageAnimal(realTinyAnimal, animal, index, animalTypes);
+                                System.out.println();
+                            } else {
+                                menuService.displayNoAnimal();
+                                break;
+                            }
+                        } else {
+                            menuService.displayNoAnimal();
+                        }
 
                     }else if (action2 == MenuService.NAME){
                         //The following searches for animals by name
@@ -52,7 +87,11 @@ public class Main {
                             if (!(animal.isEmpty())) {
                                 menuService.displayAnimal(animal);
                                 Animal realTinyAnimal = animalsService.getAnimal(index);
-                                mainService.manageAnimal(realTinyAnimal, animal, index);
+
+                                //The following get the arraylist of animal types
+                                ArrayList<Animal> animalType = animalsService.getListAnimalType();
+
+                                mainService.manageAnimal(realTinyAnimal, animal, index, animalType);
                             } else {
                                 menuService.displayNoAnimal();
                                 break;
@@ -75,15 +114,15 @@ public class Main {
 
                             Animal realAnimal = animalsService.getAnimal(index2);
 
-                            //
                             //This gets the notes
                             ArrayList<Note> note = animalsService.getAllAnimalNotesWithID(realAnimal);
                             //This displays the notes
                             menuService.displayAnimalNotes(note);
-                            //The above needs work has null point exception
-                            //
 
-                            mainService.manageAnimal(realAnimal, animalList, index2);
+                            // gets the ArrayList from AnimalsService
+                            ArrayList<Animal> animalType = animalsService.getListAnimalType();
+
+                            mainService.manageAnimal(realAnimal, animalList, index2, animalType);
 
                             System.out.println();
                         } else {
@@ -107,7 +146,11 @@ public class Main {
                             if (!(animal.isEmpty())) {
                                 menuService.displayAnimal(animal2);
                                 Animal realAnimal = animalsService.getAnimal(index3);
-                                mainService.manageAnimal(realAnimal, animal2, index3);
+
+                                //The following get the arraylist of animal types
+                                ArrayList<Animal> animalType = animalsService.getListAnimalType();
+
+                                mainService.manageAnimal(realAnimal, animal2, index3, animalType);
                                 break;
                             } else {
                                 menuService.displayNoAnimal();

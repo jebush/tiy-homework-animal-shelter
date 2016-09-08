@@ -48,6 +48,29 @@ public class AnimalsService {
 
         return littleAnimals;
     }
+
+    public ArrayList<Animal> getListByAnimalType(String type) throws SQLException {
+        ResultSet resultSet = animalTypeRepository.listAllAnimalsByType(type);
+
+        // new arraylist of animal, empty by default
+        ArrayList<Animal> littleAnimals = new ArrayList<>();
+
+        // loop over our animal
+        while(resultSet.next()){
+            Animal animal = new Animal(
+                    resultSet.getInt("animalid"),
+                    resultSet.getString("name"),
+                    resultSet.getString("species"),
+                    resultSet.getString("breed"),
+                    resultSet.getString("description")
+            );
+
+            littleAnimals.add(animal);
+        }
+
+        return littleAnimals;
+    }
+
     public ArrayList<Animal> getAnimalDetails(String name) throws SQLException {
         ResultSet resultSet = animalRepository.getAnimalByName(name);
 
@@ -117,6 +140,8 @@ public class AnimalsService {
         return animalType;
     }
 
+    //This is my current item to get working
+    //todo
     public int getTypeIDByName(String string) throws SQLException {
         return animalTypeRepository.getTypeIDByName(string);
     }
