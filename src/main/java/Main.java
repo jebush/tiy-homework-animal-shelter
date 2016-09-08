@@ -9,11 +9,14 @@ public class Main {
         //This points to the animal_shelter database
         String jdbcUrl = "jdbc:postgresql://localhost/animal_shelter";
 
-        MainService mainService = new MainService();
-        MenuService menuService = new MenuService();
+
+
         AnimalRepository animalRepository = new AnimalRepositoryImpl(jdbcUrl);
         AnimalTypeRepository animalTypeRepository = new AnimalTypeRepository(jdbcUrl);
-        AnimalsService animalsService = new AnimalsService(animalRepository, animalTypeRepository);
+        NoteRepository noteRepository = new NoteRepository(jdbcUrl);
+        AnimalsService animalsService = new AnimalsService(animalRepository, animalTypeRepository, noteRepository);
+        MenuService menuService = new MenuService(animalRepository, animalTypeRepository, noteRepository, animalsService);
+        MainService mainService = new MainService(menuService, animalsService);
 
 
 
@@ -48,7 +51,8 @@ public class Main {
                             ArrayList<Animal> animal = animalsService.getAnimalById(index);
                             if (!(animal.isEmpty())) {
                                 menuService.displayAnimal(animal);
-                                mainService.manageAnimal(animal, index);
+                                Animal realTinyAnimal = animalsService.getAnimal(index);
+                                mainService.manageAnimal(realTinyAnimal, animal, index);
                             } else {
                                 menuService.displayNoAnimal();
                                 break;
@@ -63,17 +67,25 @@ public class Main {
 
                         int index2 = menuService.promptForAnimalIndex();
 
-                        ArrayList<Animal> animalList = animalsService.getAnimalById(index2);
 
+                        ArrayList<Animal> animalList = animalsService.getAnimalById(index2);
                         if (!(animalList.isEmpty())) {
-                            ArrayList<Animal> animal = animalsService.getAnimalById(index2);
-                            if (!(animal.isEmpty())) {
-                                menuService.displayAnimal(animal);
-                                mainService.manageAnimal(animal, index2);
-                            } else {
-                                menuService.displayNoAnimal();
-                                break;
-                            }
+                            menuService.displayAnimal(animalList);
+
+
+                            Animal realAnimal = animalsService.getAnimal(index2);
+
+                            //
+                            //This gets the notes
+                            ArrayList<Note> note = animalsService.getAllAnimalNotesWithID(realAnimal);
+                            //This displays the notes
+                            menuService.displayAnimalNotes(note);
+                            //The above needs work has null point exception
+                            //
+
+                            mainService.manageAnimal(realAnimal, animalList, index2);
+
+                            System.out.println();
                         } else {
                             menuService.displayNoAnimal();
                             break;
@@ -85,6 +97,26 @@ public class Main {
                         ArrayList<Animal> animal = animalsService.getListAnimals();
                         //This will show the Animals off the ArrayList
                         menuService.listAnimals(animal);
+
+                        int index3 = menuService.promptForAnimalIndex();
+
+                        ArrayList<Animal> animalList = animalsService.getAnimalById(index3);
+
+                        if (!(animalList.isEmpty())) {
+                            ArrayList<Animal> animal2 = animalsService.getAnimalById(index3);
+                            if (!(animal.isEmpty())) {
+                                menuService.displayAnimal(animal2);
+                                Animal realAnimal = animalsService.getAnimal(index3);
+                                mainService.manageAnimal(realAnimal, animal2, index3);
+                                break;
+                            } else {
+                                menuService.displayNoAnimal();
+                                break;
+                            }
+                        } else {
+                            menuService.displayNoAnimal();
+                            break;
+                        }
 
                     } else if (action2 == MenuService.RETURN_Main_Menu){
                         //This quits to the main menu

@@ -31,14 +31,15 @@ public class AnimalTypeRepository {
     }
 
     public String getAnimalTypeById(int xWing) throws SQLException {
-        PreparedStatement stmt = this.conn.prepareStatement("SELECT * FROM animalTypes WHERE animaltypesid = ?");
+        PreparedStatement stmt = this.conn.prepareStatement("SELECT * FROM animaltypes WHERE animaltypesid = ?");
 
         String result = "";
 
         stmt.setInt(1, xWing);
         ResultSet resultString = stmt.executeQuery();
-
-        result = resultString. getString(1);
+        if (resultString.next()) {
+            result = resultString.getString("animaltype");
+        }
 
         return result;
 

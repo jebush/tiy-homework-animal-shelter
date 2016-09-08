@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -11,13 +10,13 @@ public interface AnimalRepository {
     //Need to add some more to this
     void addAnimals(Animal animal) throws SQLException;
 
-    ResultSet getAnimal(String name) throws SQLException;
+    ResultSet getAnimalByName(String name) throws SQLException;
+
+    ResultSet getAnimal(int index) throws SQLException;
 
     ResultSet getSpecificAnimal(int index) throws SQLException;
 
     void removeAnimal(int index) throws SQLException;
 
     void updateAnimal(Animal animal) throws SQLException;
-
-    int countOfAnimals();
 }

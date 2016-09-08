@@ -1,6 +1,5 @@
-/**
- * Created by rush on 8/16/16.
- */
+
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import static java.lang.System.exit;
@@ -36,6 +35,23 @@ public class MenuService {
     Scanner scanner = new Scanner(System.in);
 
 
+    private AnimalRepository animalRepository;
+
+    private AnimalTypeRepository animalTypeRepository;
+
+    private NoteRepository noteRepository;
+
+    private AnimalsService animalsService;
+
+    public MenuService() throws SQLException {
+    }
+
+    public MenuService(AnimalRepository animalRepository, AnimalTypeRepository animalTypeRepository, NoteRepository noteRepository, AnimalsService animalsService) throws SQLException {
+        this.animalRepository = animalRepository;
+        this.animalTypeRepository = animalTypeRepository;
+        this.noteRepository = noteRepository;
+        this.animalsService = animalsService;
+    }
 
 
     public int promptForMainMenuSelection() {
@@ -186,7 +202,11 @@ public class MenuService {
         } else {
             for (int i = 0; i < littleAnimals.size(); i++) {
                 Animal ani = littleAnimals.get(i);
-                result = result + ani.getAnimalType() + " ";
+                if ((i + 1) != littleAnimals.size()){
+                    result = result + ani.getAnimalType() + ", ";
+                } else {
+                    result = result + " " + ani.getAnimalType();
+                }
             }
         }
         return "(" + result.trim() + ")";
@@ -204,7 +224,6 @@ public class MenuService {
       String species = waitForString(("Species: "), true);
 
 
-
       String breed = waitForString(("Breed (optional): "), false);
 
 
@@ -214,7 +233,7 @@ public class MenuService {
       return new Animal(name, species, breed, description);
   }
 
-    public void displayAnimal(ArrayList<Animal> littleAnimals) {
+    public void displayAnimal(ArrayList<Animal> littleAnimals) throws SQLException {
         System.out.println("--- Animal Details ---");
 
         if (littleAnimals.size() == 0){
@@ -226,26 +245,24 @@ public class MenuService {
                 //This displays the Animal data
                 System.out.println("ID: " + myAnimal.getAnimalID());
                 System.out.println("Name: " + myAnimal.getName());
-                System.out.println("Species: " + myAnimal.getSpecies());
+                System.out.println("Species: " + animalsService.getSpecificAnimalType(myAnimal.getSpecie()));
                 System.out.println("Breed: " + myAnimal.getBreed());
                 System.out.println("Description: " + myAnimal.getDescription());
                 }
         }
-
-
-
     }
+
 
     public void displayNoAnimal(){
         System.out.println("Sorry, that animal does not exist");
     }
 
-    public Animal updateAnimal(Animal animal) {
+    public Animal updateAnimal(Animal animal) throws SQLException {
         System.out.println("\n-- Edit a Animal -- \n");
 
         String name = waitForString(String.format("Animal Name [%s]: ", animal.getName()), animal.getName());
 
-        String species = waitForString(String.format("Species [%s]: ", animal.getSpecies()), animal.getSpecies());
+        int species = waitForInt(String.format("Species [%s]: ", animalsService.getSpecificAnimalType(animal.getSpecie())));
 
 
         String breed = waitForString(String.format("Breed [%s]: ", animal.getBreed()), animal.getBreed());
@@ -253,7 +270,7 @@ public class MenuService {
 
         String description = waitForString(String.format("Description [%s]: ", animal.getDescription()), animal.getDescription());
         System.out.println("Success: The animal has been updated");
-        return new Animal(name, species, breed, description);
+        return new Animal(animal.getAnimalID(), name, species, breed, description);
     }
 
     public Animal addAnimalType(){
@@ -263,6 +280,7 @@ public class MenuService {
     }
 
 
+    //This is a prompt to ask if you want to delete the animal
     public boolean deleteAnimal(){
         String deleteIT = waitForString("Do you want to delete this animal?(yes/no)", true);
         boolean deleteAni = false;
@@ -281,7 +299,7 @@ public class MenuService {
     }
 
 
-    public void quit(){
+    public void quit() {
         System.out.println("--- Quit ---");
 
         String quitIt = waitForString("Are you sure you want to quit?(yes/no): ", true);
@@ -298,5 +316,33 @@ public class MenuService {
                 quit();
         }
     }
+
+    public Note addNote(){
+        //interface with user
+        System.out.printf("\n--- Add note ---\n");
+
+        String noteText = waitForString("Please enter text for note: ", true);
+
+        return new Note(noteText);
+
+    }
+
+    public void displayAnimalNotes(ArrayList<Note> animalNotes) {
+        System.out.println("--- Animal Notes ---");
+
+        if (animalNotes.size() == 0){
+            System.out.println("There are no notes on this animal. Please create one if desired.");
+        } else {
+            for (int x = 0; x < animalNotes.size(); x++) {
+                Note myAnimalNotes = animalNotes.get(x);
+
+                //This displays the Animal data
+                System.out.println("ID: " + myAnimalNotes.getId());
+                System.out.println("Note: " + myAnimalNotes.gettext());
+                System.out.println("Date: " + myAnimalNotes.getDate());
+            }
+        }
+    }
+
 }
 

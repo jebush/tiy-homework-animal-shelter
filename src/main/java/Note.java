@@ -1,21 +1,30 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.Date;
 
-/**
- * Created by rush on 8/31/16.
- */
+
 public class Note {
     private int id;
     private String text;
-    private Date date;
+    private LocalDate date;
+
 
     public Note (){
 
     }
 
-    public Note (int id, String text, Date date){
+    public Note (String text){
+        this.text = text;
+        this.date = LocalDate.now();
+    }
+
+    public Note (int id, String text, String date){
         this.id = id;
         this.text = text;
-        this.date = date;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        this.date = LocalDate.parse(date, formatter);
+
     }
 
     public int getId(){
@@ -29,15 +38,24 @@ public class Note {
     public String gettext(){
         return this.text = text;
     }
+
     public void setText(String text){
         this.text = text;
     }
-    public Date getDate(){
+
+    public LocalDate getDate(){
         return this.date = date;
     }
-    public void setDate(Date date){
+
+    public void setDate(LocalDate date){
         this.date = date;
     }
+
+    public String getDateAsString() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+        return this.date.format(formatter);
+    }
+
 
 
 }

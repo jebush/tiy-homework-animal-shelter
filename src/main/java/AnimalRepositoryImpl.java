@@ -1,6 +1,4 @@
-import java.io.IOException;
 import java.sql.*;
-import java.util.ArrayList;
 
 
 /**
@@ -11,7 +9,6 @@ public class AnimalRepositoryImpl implements AnimalRepository {
     //Provides a connection?
     private Connection conn;
 
-    private ArrayList<Animal> littleAnimals = new ArrayList<>();
 
     public AnimalRepositoryImpl(String jdbcUrl) throws SQLException {
         this.conn = DriverManager.getConnection(jdbcUrl);
@@ -24,13 +21,21 @@ public class AnimalRepositoryImpl implements AnimalRepository {
     }
 
     @Override
-    public ResultSet getAnimal(String name) throws SQLException {
+    public ResultSet getAnimalByName(String name) throws SQLException {
         PreparedStatement stmt = this.conn.prepareStatement("SELECT * FROM animal WHERE  name LIKE ?");
 
         stmt.setString(1, (name+"%"));
 
         return stmt.executeQuery();
     }
+
+    @Override
+    public ResultSet getAnimal(int index) throws SQLException{
+       PreparedStatement stmt = this.conn.prepareStatement("SELECT * FROM animal WHERE animalid = ?");
+       stmt.setInt(1, index);
+       return stmt.executeQuery();
+   }
+
 
     @Override
     public ResultSet getSpecificAnimal(int xWing) throws SQLException {
@@ -70,24 +75,12 @@ public class AnimalRepositoryImpl implements AnimalRepository {
         PreparedStatement stmt = this.conn.prepareStatement("UPDATE animal SET name = ?, species = ?, breed = ?, description = ? WHERE animalid = ?");
 
         stmt.setString(1, animal.getName());
-        stmt.setString(2, animal.getSpecies());
+        stmt.setInt(2, animal.getSpecie());
         stmt.setString(3, animal.getBreed());
         stmt.setString(4, animal.getDescription());
         stmt.setInt(5, animal.getAnimalID());
 
         stmt.executeUpdate();
-    }
-
-    //
-    //Need to change over
-    //
-
-
-
-
-    @Override
-    public int countOfAnimals(){
-        return littleAnimals.size();
     }
 
 

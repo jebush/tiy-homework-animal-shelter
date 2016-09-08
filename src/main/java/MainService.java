@@ -6,27 +6,41 @@ import java.util.ArrayList;
  */
 public class MainService {
 
-    private AnimalRepository animalRepository;
 
-
-    //This points to the animal_shelter database
-    private String jdbcUrl = "jdbc:postgresql://localhost/animal_shelter";
-
-    AnimalTypeRepository animalTypeRepository = new AnimalTypeRepository(jdbcUrl);
-    AnimalsService animalsService = new AnimalsService(animalRepository, animalTypeRepository);
-    MenuService menuService = new MenuService();
+    private MenuService menuService;
+    private AnimalsService animalsService;
 
     public MainService () throws SQLException {
 
     }
+    public MainService (MenuService menuService, AnimalsService animalsService) throws SQLException {
+        this.menuService = menuService;
+        this.animalsService = animalsService;
+    }
 
-    public void manageAnimal(ArrayList<Animal> animalList, int index) throws SQLException {
+    public void manageAnimal(Animal animal, ArrayList<Animal> animalList, int index) throws SQLException {
         while (true) {
+
             int action = menuService.promptForAnimalManage();
 
             if (action == MenuService.EDIT_Animal) {
 
 
+                if (animal != (null)) {
+                    animal = menuService.updateAnimal(animal);
+
+                    //The below system outs are a test
+                    System.out.println(animal.getAnimalID());
+                    System.out.println(animal.getBreed());
+                    System.out.println(animal.getDescription());
+                    System.out.println(animal.getName());
+                    System.out.println(animal.getSpecie());
+                    //
+
+                    animalsService.updateAnimal(animal);
+                } else {
+                    menuService.displayNoAnimal();
+                }
 
 
             } else if (action == MenuService.DELETE_Animal) {
@@ -47,6 +61,9 @@ public class MainService {
                 }
 
             } else if (action == MenuService.ADD_Note) {
+                //Creates the note but errors with a null pointer exception and shuts program down
+                Note note = menuService.addNote();
+                animalsService.addNote(index, note);
 
             } else if (action == MenuService.RETURN_Menu) {
                 break;

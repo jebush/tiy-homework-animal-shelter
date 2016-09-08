@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -9,14 +8,23 @@ public class AnimalsService {
 
 
 
+    //This points to the animal_shelter database
+    private String jdbcUrl = "jdbc:postgresql://localhost/animal_shelter";
 
-    private AnimalRepository animalRepository;
+    private AnimalRepository animalRepository = new AnimalRepositoryImpl(jdbcUrl);
 
-    private AnimalTypeRepository animalTypeRepository;
+    private AnimalTypeRepository animalTypeRepository = new AnimalTypeRepository(jdbcUrl);
 
-    public AnimalsService(AnimalRepository animalRepository, AnimalTypeRepository animalTypeRepository){
+    private NoteRepository noteRepository = new NoteRepository(jdbcUrl);
+
+    public AnimalsService() throws SQLException {
+
+    }
+
+    public AnimalsService(AnimalRepository animalRepository, AnimalTypeRepository animalTypeRepository, NoteRepository noteRepository) throws SQLException {
         this.animalRepository = animalRepository;
         this.animalTypeRepository = animalTypeRepository;
+        this.noteRepository = noteRepository;
     }
 
     public ArrayList<Animal> getListAnimals() throws SQLException {
@@ -25,7 +33,7 @@ public class AnimalsService {
         // new arraylist of animal, empty by default
         ArrayList<Animal> littleAnimals = new ArrayList<>();
 
-        // loop over our peeps
+        // loop over our animal
         while(resultSet.next()){
             Animal animal = new Animal(
                     resultSet.getInt("animalid"),
@@ -41,12 +49,12 @@ public class AnimalsService {
         return littleAnimals;
     }
     public ArrayList<Animal> getAnimalDetails(String name) throws SQLException {
-        ResultSet resultSet = animalRepository.getAnimal(name);
+        ResultSet resultSet = animalRepository.getAnimalByName(name);
 
         // new arraylist of animal, empty by default
         ArrayList<Animal> littleAnimals = new ArrayList<>();
 
-        // loop over our peeps
+        // loop over our animal
         while(resultSet.next()){
             Animal animal = new Animal(
                     resultSet.getInt("animalid"),
@@ -68,12 +76,12 @@ public class AnimalsService {
         // new arraylist of animal, empty by default
         ArrayList<Animal> littleAnimals = new ArrayList<>();
 
-        // loop over our peeps
+        // loop over our animal
         while(resultSet.next()){
             Animal animal = new Animal(
                     resultSet.getInt("animalid"),
                     resultSet.getString("name"),
-                    resultSet.getString("species"),
+                    resultSet.getInt("species"),
                     resultSet.getString("breed"),
                     resultSet.getString("description")
             );
@@ -103,6 +111,16 @@ public class AnimalsService {
         return littleAnimals;
     }
 
+    public String getSpecificAnimalType(int index) throws SQLException {
+        String animalType = animalTypeRepository.getAnimalTypeById(index);
+
+        return animalType;
+    }
+
+    public int getTypeIDByName(String string) throws SQLException {
+        return animalTypeRepository.getTypeIDByName(string);
+    }
+
     public void addAnimalType(Animal animalType) throws SQLException {
         animalTypeRepository.addAnimalType(animalType);
     }
@@ -114,31 +132,52 @@ public class AnimalsService {
     }
 
     public void updateAnimal(Animal animal) throws SQLException {
-        animalRepository.updateAnimal(animal);
+        this.animalRepository.updateAnimal(animal);
     }
 
 
-    //Need to change the below
-    //
-
-//
     public void addAnimals(Animal animal) throws SQLException {
         animalRepository.addAnimals(animal);
     }
 
 
- //   public Animal getAnimal(String name) {
-//
- //       try {
- //           return animalRepository.getAnimal(name);
- //       } catch (IndexOutOfBoundsException e){
- //           return null;
- //       }
-//
- //   }
+    public Animal getAnimal(int index) throws SQLException {
+        Animal animal = new Animal();
 
 
+        try {
+            ResultSet results = this.animalRepository.getSpecificAnimal(index);
+            while (results.next()) {
+                animal.setAnimalid(results.getInt("animalid"));
+                animal.setName(results.getString("name"));
+                animal.setSpecie(results.getInt("species"));
+                animal.setBreed(results.getString("breed"));
+                animal.setDescription(results.getString("description"));
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return animal;
+    }
 
+    public void addNote(int animalId,  Note note) throws SQLException {
+        this.noteRepository.addAnimalNote(animalId, note);
+    }
 
+    public ArrayList<Note> getAllAnimalNotesWithID(Animal animal) throws SQLException {
+        ArrayList<Note> notes = new ArrayList<>();
+
+        ResultSet results = this.noteRepository.listNotesForAnimal(animal);
+        while (results.next()) {
+            Note note = new Note(
+                    results.getInt("noteid"),
+                    results.getString("note"),
+                    results.getString("date")
+            );
+            notes.add(note);
+        }
+
+        return notes;
+    }
 
 }

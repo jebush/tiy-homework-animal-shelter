@@ -23,7 +23,14 @@ public class Animal {
     public Animal() {
 
     }
+    public Animal(int animalid, String name, int specie, String breed, String description){
+        this.animalid = animalid;
+        this.name = name;
+        this.specie = specie;
+        this.breed = breed;
+        this.description = description;
 
+    }
     public Animal(String name, int specie, String breed, String description){
         this.name = name;
         this.specie = specie;
@@ -76,7 +83,7 @@ public class Animal {
     public int getSpecie(){
         return this.specie;
     }
-    public void setSpecie(int species){
+    public void setSpecie(int specie){
         this.specie = specie;
     }
 
@@ -104,6 +111,8 @@ public class Animal {
         this.animalid = animalid;
     }
 
+
+    //This is the notes getter and setter
     public ArrayList<Note> getNotes() {
         return notes;
     }
@@ -128,4 +137,5 @@ public class Animal {
     public void setAnimalType(String animalType){
         this.animalType = animalType;
     }
+
 }
