@@ -3,8 +3,8 @@
   <component name="dataSourceStorageLocal">
     <data-source name="PostgreSQL - animal_shelter@localhost" uuid="9ac9c274-1da1-4604-bc68-e7b480d3aeeb">
       <secret-storage>master_key</secret-storage>
-      <introspection-scope>animal_shelter:public,pg_catalog,</introspection-scope>
-      <resolve-scope>animal_shelter:public,</resolve-scope>
+      <introspection-scope>animal_shelter:pg_catalog,public</introspection-scope>
+      <resolve-scope>animal_shelter:public</resolve-scope>
     </data-source>
   </component>
 </project>

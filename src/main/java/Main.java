@@ -55,16 +55,20 @@ public class Main {
 
                             //This lists all animals returned by the search
                             menuService.listAnimals(animals);
+
                             int index = menuService.promptForAnimalIndex();
+
                             ArrayList<Animal> animal = animalsService.getAnimalById(index);
+
                             if (!(animal.isEmpty())) {
-                                menuService.displayAnimal(animal);
-                                Animal realTinyAnimal = animalsService.getAnimal(index);
+
+                                Animal realTinyAnimal = displayAnimalPlusNotes(animalsService, menuService, animal, index);
 
                                 //The following get the arraylist of animal types
                                 ArrayList<Animal> animalTypes = animalsService.getListAnimalType();
 
                                 mainService.manageAnimal(realTinyAnimal, animal, index, animalTypes);
+                                System.out.println();
                                 System.out.println();
                             } else {
                                 menuService.displayNoAnimal();
@@ -81,12 +85,15 @@ public class Main {
                         ArrayList<Animal> animalList = animalsService.getAnimalDetails(name);
 
                         if (!(animalList.isEmpty())) {
+
                             menuService.listAnimals(animalList);
+
                             int index = menuService.promptForAnimalIndex();
+
                             ArrayList<Animal> animal = animalsService.getAnimalById(index);
                             if (!(animal.isEmpty())) {
-                                menuService.displayAnimal(animal);
-                                Animal realTinyAnimal = animalsService.getAnimal(index);
+
+                                Animal realTinyAnimal = displayAnimalPlusNotes(animalsService, menuService, animal, index);
 
                                 //The following get the arraylist of animal types
                                 ArrayList<Animal> animalType = animalsService.getListAnimalType();
@@ -109,15 +116,8 @@ public class Main {
 
                         ArrayList<Animal> animalList = animalsService.getAnimalById(index2);
                         if (!(animalList.isEmpty())) {
-                            menuService.displayAnimal(animalList);
 
-
-                            Animal realAnimal = animalsService.getAnimal(index2);
-
-                            //This gets the notes
-                            ArrayList<Note> note = animalsService.getAllAnimalNotesWithID(realAnimal);
-                            //This displays the notes
-                            menuService.displayAnimalNotes(note);
+                            Animal realAnimal = displayAnimalPlusNotes(animalsService, menuService, animalList, index2);
 
                             // gets the ArrayList from AnimalsService
                             ArrayList<Animal> animalType = animalsService.getListAnimalType();
@@ -144,8 +144,8 @@ public class Main {
                         if (!(animalList.isEmpty())) {
                             ArrayList<Animal> animal2 = animalsService.getAnimalById(index3);
                             if (!(animal.isEmpty())) {
-                                menuService.displayAnimal(animal2);
-                                Animal realAnimal = animalsService.getAnimal(index3);
+
+                                Animal realAnimal = displayAnimalPlusNotes(animalsService, menuService, animalList, index3);
 
                                 //The following get the arraylist of animal types
                                 ArrayList<Animal> animalType = animalsService.getListAnimalType();
@@ -182,5 +182,18 @@ public class Main {
             }
         }
 
+    }
+
+    public static Animal displayAnimalPlusNotes(AnimalsService animalsService, MenuService menuService, ArrayList<Animal> animalList, int index) throws SQLException {
+        menuService.displayAnimal(animalList);
+
+        Animal realAnimal = animalsService.getAnimal(index);
+
+        //This gets the notes
+        ArrayList<Note> note = animalsService.getAllAnimalNotesWithID(realAnimal);
+        //This displays the notes
+        menuService.displayAnimalNotes(note);
+
+        return realAnimal;
     }
 }

@@ -60,7 +60,7 @@ public class AnimalsService {
             Animal animal = new Animal(
                     resultSet.getInt("animalid"),
                     resultSet.getString("name"),
-                    resultSet.getString("species"),
+                    resultSet.getInt("species"),
                     resultSet.getString("breed"),
                     resultSet.getString("description")
             );
@@ -82,7 +82,7 @@ public class AnimalsService {
             Animal animal = new Animal(
                     resultSet.getInt("animalid"),
                     resultSet.getString("name"),
-                    resultSet.getString("species"),
+                    resultSet.getInt("species"),
                     resultSet.getString("breed"),
                     resultSet.getString("description")
             );

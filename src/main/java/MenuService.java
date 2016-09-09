@@ -177,8 +177,6 @@ public class MenuService {
             for (int x = 0; x < littleAnimals.size(); x++) {
                 Animal ani = littleAnimals.get(x);
 
-                //The error occurs here
-                //TODO
                 System.out.println(ani.getAnimalID() + " )" + ani.getName() + "        " + animalsService.getSpecificAnimalType(ani.getSpecie()) + " \n");
             }
         }
@@ -375,6 +373,7 @@ public class MenuService {
         int specieType;
         String species = waitForString(String.format("Species [%s]: ", animalsService.getSpecificAnimalType(animal.getSpecie())), false);
 
+        species = species.trim();
 
         if (species.trim().isEmpty()){
             specieType = animal.getSpecie();
