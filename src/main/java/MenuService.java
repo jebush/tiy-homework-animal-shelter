@@ -227,7 +227,7 @@ public class MenuService {
       String result = listAnimalTypeAsString(animalType);
       System.out.print(result);
 
-      int specie = getAnimalTypesToCreateUpdate();
+      int specie = getAnimalTypesToCreate();
 
       String breed = waitForString(("Breed (optional): "), false);
 
@@ -271,8 +271,8 @@ public class MenuService {
         //TODO
         String result = listAnimalTypeAsString(animalType);
         System.out.print(result);
-        int species = waitForInt(String.format("Species [%s]: ", animalsService.getSpecificAnimalType(animal.getSpecie())));
-
+        //int species = waitForInt(String.format("Species [%s]: ", animalsService.getSpecificAnimalType(animal.getSpecie())));
+        int species = getAnimalTypesToUpdate(animal);
 
         String breed = waitForString(String.format("Breed [%s]: ", animal.getBreed()), animal.getBreed());
 
@@ -354,7 +354,7 @@ public class MenuService {
     }
 
     //This is a prompt to get the animal type. Will force you to pick off known list of types
-    public int getAnimalTypesToCreateUpdate() throws SQLException {
+    public int getAnimalTypesToCreate() throws SQLException {
 
         String species = waitForString(("Species: "), true);
 
@@ -363,11 +363,31 @@ public class MenuService {
 
         if ((specieType) == -1) {
             System.out.println("Please select animal off the list");
-            getAnimalTypesToCreateUpdate();
+            getAnimalTypesToCreate();
         }
 
         return specieType;
     }
 
+    //This is a prompt to get the animal type. Will force you to pick off known list of types
+    public int getAnimalTypesToUpdate(Animal animal) throws SQLException {
+
+        int specieType;
+        String species = waitForString(String.format("Species [%s]: ", animalsService.getSpecificAnimalType(animal.getSpecie())), false);
+
+
+        if (species.trim().isEmpty()){
+            specieType = animal.getSpecie();
+        } else {
+            specieType = animalsService.getTypeIDByName(species);
+
+            if ((specieType) == -1) {
+                System.out.println("Please select animal off the list");
+                getAnimalTypesToUpdate(animal);
+            }
+        }
+
+        return specieType;
+    }
 }
 

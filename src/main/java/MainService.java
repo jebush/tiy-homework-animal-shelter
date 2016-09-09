@@ -28,14 +28,6 @@ public class MainService {
                 if (animal != (null)) {
                     animal = menuService.updateAnimal(animal, animalType);
 
-                    //The below system outs are a test
-                    System.out.println(animal.getAnimalID());
-                    System.out.println(animal.getBreed());
-                    System.out.println(animal.getDescription());
-                    System.out.println(animal.getName());
-                    System.out.println(animal.getSpecie());
-                    //
-
                     animalsService.updateAnimal(animal);
                 } else {
                     menuService.displayNoAnimal();
