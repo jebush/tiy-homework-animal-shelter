@@ -8,6 +8,8 @@
     <artifactId>AnimalShelter</artifactId>
     <version>1.4</version>
 
+    <packaging>war</packaging>
+
     <dependencies>
         <dependency>
             <groupId>org.postgresql</groupId>
@@ -20,7 +22,13 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>3.1.0</version>
+    </dependency>
     </dependencies>
+
 
     <properties>
         <maven.compiler.target>1.8</maven.compiler.target>

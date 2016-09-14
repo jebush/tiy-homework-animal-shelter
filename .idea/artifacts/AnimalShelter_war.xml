@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="AnimalShelter:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="AnimalShelter-1.4.war">
+      <element id="artifact" artifact-name="AnimalShelter:war exploded" />
+    </root>
+  </artifact>
+</component>

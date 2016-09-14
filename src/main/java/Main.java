@@ -82,7 +82,7 @@ public class Main {
                         //The following searches for animals by name
                         String name = menuService.waitForString2("What is the name?", true);
                         // gets the ArrayList from AnimalsService
-                        ArrayList<Animal> animalList = animalsService.getAnimalDetails(name);
+                        ArrayList<Animal> animalList = animalsService.getAnimalDetailsByName(name);
 
                         if (!(animalList.isEmpty())) {
 

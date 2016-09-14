@@ -71,7 +71,7 @@ public class AnimalsService {
         return littleAnimals;
     }
 
-    public ArrayList<Animal> getAnimalDetails(String name) throws SQLException {
+    public ArrayList<Animal> getAnimalDetailsByName(String name) throws SQLException {
         ResultSet resultSet = animalRepository.getAnimalByName(name);
 
         // new arraylist of animal, empty by default
@@ -140,8 +140,6 @@ public class AnimalsService {
         return animalType;
     }
 
-    //This is my current item to get working
-    //todo
     public int getTypeIDByName(String string) throws SQLException {
         return animalTypeRepository.getTypeIDByName(string);
     }

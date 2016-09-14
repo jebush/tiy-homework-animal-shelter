@@ -1,0 +1,61 @@
+.h1-style{
+    text-decoration: underline ;
+}
+.nav-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: slategray;
+}
+
+.nav-links li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+.nav-links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav-links li a:hover {
+    background-color: #111;
+}
+
+#searchForm {
+    border: 1px solid burlywood;
+    border-radius: 4px;
+}
+
+.image {
+    height: auto;
+    width: auto;
+    max-width: 200px;
+    max-height: 200px;
+    padding: 10px;
+    border: thin solid black;
+    float: left;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+.AnimalStats {
+    list-style-type: none;
+    float:left;
+    display: list-item;
+    padding: 0;
+    margin: 0;
+}
+.animalDisplay {
+    list-style-type: none;
+    padding: 0 0 0 10px;
+    margin: 0;
+}
+
+.AnimalListing {
+    clear: left;
+}
