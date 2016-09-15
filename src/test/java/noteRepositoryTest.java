@@ -1,4 +1,5 @@
 import org.junit.Test;
+import repositories.NoteRepository;
 
 public class noteRepositoryTest {
 

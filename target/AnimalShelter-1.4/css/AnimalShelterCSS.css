@@ -33,7 +33,7 @@
 }
 
 .image {
-    height: 200px;
+    height: auto;
     width: auto;
     max-width: 200px;
     max-height: 200px;

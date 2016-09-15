@@ -8,7 +8,7 @@
 //  @Test
 //  public void getNameTest(){
 //      //arrange
-//      Animal animal = new Animal("Steve", "dog", "s", "fun");
+//      entities.Animal animal = new entities.Animal("Steve", "dog", "s", "fun");
 //      //act
 //      String name = animal.getName();
 //      //assert
@@ -17,7 +17,7 @@
 //  @Test
 //  public void getBreedTest(){
 //      //arrange
-//      Animal animal = new Animal("Steve", "dog", "s", "fun");
+//      entities.Animal animal = new entities.Animal("Steve", "dog", "s", "fun");
 //      //act
 //      String breed = animal.getBreed();
 //      //assert
@@ -26,7 +26,7 @@
 //  @Test
 //  public void getSpeciesTest(){
 //      //arrange
-//      Animal animal = new Animal("Steve", "dog", "s", "fun");
+//      entities.Animal animal = new entities.Animal("Steve", "dog", "s", "fun");
 //      //act
 //      String species = animal.getSpecies();
 //      //assert
@@ -35,7 +35,7 @@
 //  @Test
 //  public void getDescriptionTest(){
 //      //arrange
-//      Animal animal = new Animal("Steve", "dog", "s", "fun");
+//      entities.Animal animal = new entities.Animal("Steve", "dog", "s", "fun");
 //      //act
 //      String description = animal.getDescription();
 //      //assert
@@ -45,7 +45,7 @@
 //  @Test
 //  public void setNameTest(){
 //      //arrange
-//      Animal animal = new Animal("Steve", "dog", "s", "fun");
+//      entities.Animal animal = new entities.Animal("Steve", "dog", "s", "fun");
 //      //act
 //      animal.setName("Bob");
 //      //assert
@@ -55,7 +55,7 @@
 //  @Test
 //  public void setSpeciesTest(){
 //      //arrange
-//      Animal animal = new Animal("Steve", "dog", "s", "fun");
+//      entities.Animal animal = new entities.Animal("Steve", "dog", "s", "fun");
 //      //act
 //      animal.setSpecies("Parrot");
 //      //assert
@@ -65,7 +65,7 @@
 //  @Test
 //  public void setBreedTest(){
 //      //arrange
-//      Animal animal = new Animal("Steve", "dog", "s", "fun");
+//      entities.Animal animal = new entities.Animal("Steve", "dog", "s", "fun");
 //      //act
 //      animal.setBreed("Bird");
 //      //assert
@@ -75,7 +75,7 @@
 //  @Test
 //  public void setDescriptionTest(){
 //      //arrange
-//      Animal animal = new Animal("Steve", "dog", "s", "fun");
+//      entities.Animal animal = new entities.Animal("Steve", "dog", "s", "fun");
 //      //act
 //      animal.setDescription("Will Claw eyes out");
 //      //assert
