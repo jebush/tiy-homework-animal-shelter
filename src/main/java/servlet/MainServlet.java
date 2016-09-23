@@ -1,10 +1,11 @@
-package services;
+package servlet;
 
 import entities.Animal;
 import repositories.AnimalRepository;
 import repositories.AnimalRepositoryImpl;
 import repositories.AnimalTypeRepository;
 import repositories.NoteRepository;
+import services.AnimalsService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +16,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-@WebServlet("/ListAnimals")
+@WebServlet("")
 public class MainServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -25,7 +26,7 @@ public class MainServlet extends HttpServlet {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        String name = "Bo";
+        String name = "";
         if (req.getParameterMap().containsKey("name")) {
             name = req.getParameter("name");
         }

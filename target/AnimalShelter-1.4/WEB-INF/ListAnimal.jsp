@@ -24,9 +24,9 @@
 
 <h2>List Animals</h2>
 <div>
-    <form id="searchForm" action="/ListAnimals" method="post" enctype="multipart/form-data">
+    <form id="searchForm" action="/" method="post" enctype="multipart/form-data">
         <p>Search for an animal:</p>
-        <input id="name" name="name" type="text" placeholder="Name" value="${name}">
+        <input id="name" name="name" type="text" placeholder="Name" value="">
 
         <label>Type</label>
         <select id = "myList" class="list">
@@ -36,7 +36,7 @@
             <option value = "4">Duck</option>
         </select>
 
-        <input name="id" type="number" placeholder="id">
+        <input name="id" type="number" placeholder="id" value="">
         <button type="submit">Search</button>
 
     </form>

@@ -2,49 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7b9c359-fee1-4702-a733-e0db103bb5fe" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/AddAnimal.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/AnimalNotes.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/ListAnimal.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/WEB-INF/classes/Animal.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/WEB-INF/classes/AnimalRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/WEB-INF/classes/AnimalRepositoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/WEB-INF/classes/AnimalTypeRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/WEB-INF/classes/AnimalsService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/WEB-INF/classes/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/WEB-INF/classes/MainService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/WEB-INF/classes/MenuService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/WEB-INF/classes/Note.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/WEB-INF/classes/NoteRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Animal.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/AnimalRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/AnimalRepositoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/AnimalTypeRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/AnimalsService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/MainService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/MenuService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Note.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/NoteRepository.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Animal.java" afterPath="$PROJECT_DIR$/src/main/java/entities/Animal.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/AnimalRepository.java" afterPath="$PROJECT_DIR$/src/main/java/repositories/AnimalRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/AnimalRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/repositories/AnimalRepositoryImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/AnimalTypeRepository.java" afterPath="$PROJECT_DIR$/src/main/java/repositories/AnimalTypeRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/AnimalsService.java" afterPath="$PROJECT_DIR$/src/main/java/services/AnimalsService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/MainService.java" afterPath="$PROJECT_DIR$/src/main/java/services/MainService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/MenuService.java" afterPath="$PROJECT_DIR$/src/main/java/services/MenuService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Note.java" afterPath="$PROJECT_DIR$/src/main/java/entities/Note.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/NoteRepository.java" afterPath="$PROJECT_DIR$/src/main/java/repositories/NoteRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/AddAnimal.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/AddAnimal.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/AnimalNotes.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/AnimalNotes.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/ListAnimal.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ListAnimal.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/noteRepositoryTest.class" afterPath="$PROJECT_DIR$/target/test-classes/noteRepositoryTest.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/services/MainService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/services/MenuService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/WEB-INF/classes/services/MainService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/WEB-INF/classes/services/MainServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/WEB-INF/classes/services/MenuService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/services/MainService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/services/MainServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/services/MenuService.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/services/MainServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/MainServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/WEB-INF/classes/repositories/AnimalRepositoryImpl.class" afterPath="$PROJECT_DIR$/target/AnimalShelter-1.4/WEB-INF/classes/repositories/AnimalRepositoryImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/repositories/AnimalRepositoryImpl.class" afterPath="$PROJECT_DIR$/target/classes/repositories/AnimalRepositoryImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/animalTest.java" afterPath="$PROJECT_DIR$/src/test/java/animalTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/noteRepositoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/noteRepositoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/css/AnimalShelterCSS.css" afterPath="$PROJECT_DIR$/target/AnimalShelter-1.4/css/AnimalShelterCSS.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/repositories/AnimalRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/repositories/AnimalRepositoryImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ListAnimal.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ListAnimal.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/AnimalShelter-1.4/WEB-INF/ListAnimal.jsp" afterPath="$PROJECT_DIR$/target/AnimalShelter-1.4/WEB-INF/ListAnimal.jsp" />
     </list>
     <ignored path="tiy-homework-animal-shelter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,6 +61,10 @@
       <PATH_ELEMENT>
         <option name="myItemId" />
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="note" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
     <PATH>
@@ -135,46 +111,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="MainServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/MainServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlet/MainServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-399">
-              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AnimalRepositoryImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repositories/AnimalRepositoryImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="95" column="34" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1473945616000" expanded="true" signature="565:585" ph="SELECT * FRO... animal" />
-                <marker date="1473945616000" expanded="true" signature="565:603" ph="SELECT * FRO... animal" />
-                <marker date="1473945616000" expanded="true" signature="761:768" ph="SELECT a.ani... " />
-                <marker date="1473945616000" expanded="true" signature="761:800" ph="SELECT * FRO... animal" />
-                <marker date="1473945616000" expanded="true" signature="1025:1064" ph="SELECT * FRO... animal" />
-                <marker date="1473945616000" expanded="true" signature="1287:1326" ph="SELECT * FRO... animal" />
-                <marker date="1473945616000" expanded="true" signature="1546:1636" ph="INSERT INTO animal... " />
-                <marker date="1473945616000" expanded="true" signature="2001:2038" ph="DELETE FROM " />
-                <marker date="1473945616000" expanded="true" signature="2001:2040" ph="DELETE FROM " />
-                <marker date="1473945616000" expanded="true" signature="2254:2321" ph="UPDATE anima... " />
-                <marker date="1473945616000" expanded="true" signature="2254:2340" ph="UPDATE anima... " />
-                <marker date="1473945616000" expanded="true" signature="2771:3015" ph="SELECT a.nam... animal" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9ac9c274-1da1-4604-bc68-e7b480d3aeeb/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state relative-caret-position="-149">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -183,8 +123,18 @@
       <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+            <state relative-caret-position="75">
+              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Animal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Animal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -193,28 +143,19 @@
       <file leaf-file-name="ListAnimal.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ListAnimal.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="-629">
+              <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AnimalTypeRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repositories/AnimalTypeRepository.java">
+      <file leaf-file-name="AddAnimal.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/AddAnimal.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1473876912000" expanded="true" signature="486:511" ph="SELECT * FRO... animaltypes" />
-                <marker date="1473876912000" expanded="true" signature="486:534" ph="SELECT * FRO... animaltypes" />
-                <marker date="1473876912000" expanded="true" signature="700:734" ph="SELECT anima... animaltypes" />
-                <marker date="1473876912000" expanded="true" signature="932:970" ph="SELECT * FRO... animal" />
-                <marker date="1473876912000" expanded="true" signature="1187:1238" ph="INSERT INTO animaltypes... " />
-                <marker date="1473876912000" expanded="true" signature="1463:1512" ph="SELECT * FRO... animalTypes" />
-                <marker date="1473876912000" expanded="true" signature="1964:2010" ph="SELECT * FRO... animaltypes" />
-              </folding>
+            <state relative-caret-position="-119">
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -222,10 +163,55 @@
       <file leaf-file-name="AnimalsService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/services/AnimalsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="95" column="16" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
+            <state relative-caret-position="2880">
+              <caret line="201" column="31" selection-start-line="201" selection-start-column="31" selection-end-line="201" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tiy-homework-animal-shelter.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tiy-homework-animal-shelter.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnimalShelter.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AnimalShelter.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NoteRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/repositories/NoteRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="19" selection-end-column="35" />
+              <folding>
+                <marker date="1473876912000" expanded="true" signature="447:482" ph="SELECT * FRO... note" />
+                <marker date="1473876912000" expanded="true" signature="705:740" ph="SELECT * FRO... note" />
+                <marker date="1473876912000" expanded="true" signature="976:1030" ph="INSERT INTO note... " />
+                <marker date="1473876912000" expanded="true" signature="1326:1359" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -282,10 +268,11 @@
         <option value="$PROJECT_DIR$/src/main/java/services/MenuService.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/AnimalsService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/ListAnimal.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/ListAnimal.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/services/MainServlet.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/9ac9c274-1da1-4604-bc68-e7b480d3aeeb/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/repositories/AnimalRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlet/MainServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/ListAnimal.jsp" />
       </list>
     </option>
   </component>
@@ -359,6 +346,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -366,6 +355,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="tiy-homework-animal-shelter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -480,6 +473,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="servlet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tiy-homework-animal-shelter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tiy-homework-animal-shelter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -531,11 +550,13 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -610,7 +631,10 @@
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
-      <method />
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
@@ -633,7 +657,10 @@
       <Profilers>
         <option name="GAPID_DISABLE_PCS" value="false" />
       </Profilers>
-      <method />
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
@@ -1118,12 +1145,15 @@
       <updated>1472840915363</updated>
       <workItem from="1472840917044" duration="83454000" />
       <workItem from="1473442549974" duration="4186000" />
-      <workItem from="1473451928338" duration="31183000" />
+      <workItem from="1473451928338" duration="39889000" />
+      <workItem from="1474289055548" duration="1315000" />
+      <workItem from="1474401713983" duration="52000" />
+      <workItem from="1474645445295" duration="795000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118823000" />
+    <option name="totallyTimeSpent" value="129691000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1139,36 +1169,36 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32794678" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27281368" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20912547" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997195" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2756654" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1196,28 +1226,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/AnimalRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/repositories/NoteRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
             <marker date="1473876912000" expanded="true" signature="447:482" ph="SELECT * FRO... note" />
             <marker date="1473876912000" expanded="true" signature="705:740" ph="SELECT * FRO... note" />
             <marker date="1473876912000" expanded="true" signature="976:1030" ph="INSERT INTO note... " />
@@ -1230,9 +1244,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1240,10 +1251,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1560">
           <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
-          <folding>
-            <element signature="e#2601#2602#0" expanded="true" />
-            <element signature="e#2629#2630#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1252,58 +1260,32 @@
         <state relative-caret-position="1275">
           <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1473945616000" expanded="true" signature="565:585" ph="SELECT * FRO... animal" />
-            <marker date="1473945616000" expanded="true" signature="565:603" ph="SELECT * FRO... animal" />
-            <marker date="1473945616000" expanded="true" signature="761:768" ph="SELECT a.ani... " />
-            <marker date="1473945616000" expanded="true" signature="761:800" ph="SELECT * FRO... animal" />
-            <marker date="1473945616000" expanded="true" signature="1025:1064" ph="SELECT * FRO... animal" />
-            <marker date="1473945616000" expanded="true" signature="1287:1326" ph="SELECT * FRO... animal" />
-            <marker date="1473945616000" expanded="true" signature="1546:1636" ph="INSERT INTO animal... " />
-            <marker date="1473945616000" expanded="true" signature="2001:2038" ph="DELETE FROM " />
-            <marker date="1473945616000" expanded="true" signature="2001:2040" ph="DELETE FROM " />
-            <marker date="1473945616000" expanded="true" signature="2254:2321" ph="UPDATE anima... " />
-            <marker date="1473945616000" expanded="true" signature="2254:2340" ph="UPDATE anima... " />
-            <marker date="1473945616000" expanded="true" signature="2771:3015" ph="SELECT a.nam... animal" />
+            <marker date="1473947189000" expanded="true" signature="565:585" ph="SELECT * FRO... animal" />
+            <marker date="1473947189000" expanded="true" signature="565:603" ph="SELECT * FRO... animal" />
+            <marker date="1473947189000" expanded="true" signature="761:768" ph="SELECT a.ani... " />
+            <marker date="1473947189000" expanded="true" signature="761:799" ph="SELECT * FRO... animal" />
+            <marker date="1473947189000" expanded="true" signature="1024:1063" ph="SELECT * FRO... animal" />
+            <marker date="1473947189000" expanded="true" signature="1286:1325" ph="SELECT * FRO... animal" />
+            <marker date="1473947189000" expanded="true" signature="1545:1635" ph="INSERT INTO animal... " />
+            <marker date="1473947189000" expanded="true" signature="2000:2037" ph="DELETE FROM " />
+            <marker date="1473947189000" expanded="true" signature="2000:2039" ph="DELETE FROM " />
+            <marker date="1473947189000" expanded="true" signature="2253:2320" ph="UPDATE anima... " />
+            <marker date="1473947189000" expanded="true" signature="2253:2339" ph="UPDATE anima... " />
+            <marker date="1473947189000" expanded="true" signature="2757:2808" ph="SELECT a.nam... " />
+            <marker date="1473947189000" expanded="true" signature="2757:2899" ph="SELECT a.nam... animal" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/MenuService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2490">
-          <caret line="173" column="39" selection-start-line="173" selection-start-column="39" selection-end-line="173" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/MenuService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/repositories/AnimalTypeRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
           <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1473876912000" expanded="true" signature="486:511" ph="SELECT * FRO... animaltypes" />
-            <marker date="1473876912000" expanded="true" signature="486:534" ph="SELECT * FRO... animaltypes" />
-            <marker date="1473876912000" expanded="true" signature="700:734" ph="SELECT anima... animaltypes" />
-            <marker date="1473876912000" expanded="true" signature="932:970" ph="SELECT * FRO... animal" />
-            <marker date="1473876912000" expanded="true" signature="1187:1238" ph="INSERT INTO animaltypes... " />
-            <marker date="1473876912000" expanded="true" signature="1463:1512" ph="SELECT * FRO... animalTypes" />
-            <marker date="1473876912000" expanded="true" signature="1964:2010" ph="SELECT * FRO... animaltypes" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/MainService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/MainService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/services/AnimalsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1314,20 +1296,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="68" column="36" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/repositories/NoteRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
             <marker date="1473876912000" expanded="true" signature="447:482" ph="SELECT * FRO... note" />
             <marker date="1473876912000" expanded="true" signature="705:740" ph="SELECT * FRO... note" />
             <marker date="1473876912000" expanded="true" signature="976:1030" ph="INSERT INTO note... " />
@@ -1340,16 +1314,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AnimalShelter.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1363,14 +1327,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/9e1ff354/9ac9c274-1da1-4604-bc68-e7b480d3aeeb/animal_shelter.public.note">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1378,7 +1342,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="79" column="47" selection-start-line="79" selection-start-column="47" selection-end-line="79" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1386,7 +1349,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1394,7 +1356,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1406,113 +1367,110 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/9e1ff354/9ac9c274-1da1-4604-bc68-e7b480d3aeeb/animal_shelter.public.animal">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/9e1ff354/9ac9c274-1da1-4604-bc68-e7b480d3aeeb/animal_shelter.public.animaltypes">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/9e1ff354/9ac9c274-1da1-4604-bc68-e7b480d3aeeb/animal_shelter.public.note">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/9e1ff354/9ac9c274-1da1-4604-bc68-e7b480d3aeeb/animal_shelter.public.note">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/9e1ff354/9ac9c274-1da1-4604-bc68-e7b480d3aeeb/animal_shelter.public.note">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/9e1ff354/9ac9c274-1da1-4604-bc68-e7b480d3aeeb/animal_shelter.public.note">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/9e1ff354/9ac9c274-1da1-4604-bc68-e7b480d3aeeb/animal_shelter.public.animaltypes">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/9e1ff354/9ac9c274-1da1-4604-bc68-e7b480d3aeeb/animal_shelter.public.animaltypes">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/9e1ff354/9ac9c274-1da1-4604-bc68-e7b480d3aeeb/animal_shelter.public.animaltypes">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1520,31 +1478,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/9e1ff354/9ac9c274-1da1-4604-bc68-e7b480d3aeeb/animal_shelter.public.animaltypes">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Animal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#2601#2602#0" expanded="true" />
-            <element signature="e#2629#2630#0" expanded="true" />
-          </folding>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1552,7 +1497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1560,52 +1504,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/MenuService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="391" column="0" selection-start-line="391" selection-start-column="0" selection-end-line="391" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="58" column="78" selection-start-line="58" selection-start-column="78" selection-end-line="58" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/NoteRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1473876912000" expanded="true" signature="447:482" ph="SELECT * FRO... note" />
-            <marker date="1473876912000" expanded="true" signature="705:740" ph="SELECT * FRO... note" />
-            <marker date="1473876912000" expanded="true" signature="976:1030" ph="INSERT INTO note... " />
-            <marker date="1473876912000" expanded="true" signature="1326:1359" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/MenuService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/AnimalNotes.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1614,18 +1518,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/AddAnimal.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/MainService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/AnimalTypeRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="51" column="14" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="870">
+          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/MainService.java">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9ac9c274-1da1-4604-bc68-e7b480d3aeeb/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1011">
-          <caret line="85" column="43" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
+        <state relative-caret-position="30">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/AnimalRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+          <folding>
+            <marker date="1473947189000" expanded="true" signature="565:585" ph="SELECT * FRO... animal" />
+            <marker date="1473947189000" expanded="true" signature="565:603" ph="SELECT * FRO... animal" />
+            <marker date="1473947189000" expanded="true" signature="761:768" ph="SELECT a.ani... " />
+            <marker date="1473947189000" expanded="true" signature="761:799" ph="SELECT * FRO... animal" />
+            <marker date="1473947189000" expanded="true" signature="1024:1063" ph="SELECT * FRO... animal" />
+            <marker date="1473947189000" expanded="true" signature="1286:1325" ph="SELECT * FRO... animal" />
+            <marker date="1473947189000" expanded="true" signature="1545:1635" ph="INSERT INTO animal... " />
+            <marker date="1473947189000" expanded="true" signature="2000:2037" ph="DELETE FROM " />
+            <marker date="1473947189000" expanded="true" signature="2000:2039" ph="DELETE FROM " />
+            <marker date="1473947189000" expanded="true" signature="2253:2320" ph="UPDATE anima... " />
+            <marker date="1473947189000" expanded="true" signature="2253:2339" ph="UPDATE anima... " />
+            <marker date="1473947189000" expanded="true" signature="2757:2808" ph="SELECT a.nam... " />
+            <marker date="1473947189000" expanded="true" signature="2757:2899" ph="SELECT a.nam... animal" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/NoteRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="19" selection-end-column="35" />
+          <folding>
+            <marker date="1473876912000" expanded="true" signature="447:482" ph="SELECT * FRO... note" />
+            <marker date="1473876912000" expanded="true" signature="705:740" ph="SELECT * FRO... note" />
+            <marker date="1473876912000" expanded="true" signature="976:1030" ph="INSERT INTO note... " />
+            <marker date="1473876912000" expanded="true" signature="1326:1359" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/AnimalsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2880">
+          <caret line="201" column="31" selection-start-line="201" selection-start-column="31" selection-end-line="201" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1640,86 +1586,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tiy-homework-animal-shelter.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AnimalShelter.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Animal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        <state relative-caret-position="75">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ListAnimal.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="-629">
+          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/MainServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-149">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/MainServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/AddAnimal.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-399">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/AnimalsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="95" column="16" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/AnimalTypeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1473876912000" expanded="true" signature="486:511" ph="SELECT * FRO... animaltypes" />
-            <marker date="1473876912000" expanded="true" signature="486:534" ph="SELECT * FRO... animaltypes" />
-            <marker date="1473876912000" expanded="true" signature="700:734" ph="SELECT anima... animaltypes" />
-            <marker date="1473876912000" expanded="true" signature="932:970" ph="SELECT * FRO... animal" />
-            <marker date="1473876912000" expanded="true" signature="1187:1238" ph="INSERT INTO animaltypes... " />
-            <marker date="1473876912000" expanded="true" signature="1463:1512" ph="SELECT * FRO... animalTypes" />
-            <marker date="1473876912000" expanded="true" signature="1964:2010" ph="SELECT * FRO... animaltypes" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9ac9c274-1da1-4604-bc68-e7b480d3aeeb/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        <state relative-caret-position="-119">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/AnimalRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="95" column="34" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1473945616000" expanded="true" signature="565:585" ph="SELECT * FRO... animal" />
-            <marker date="1473945616000" expanded="true" signature="565:603" ph="SELECT * FRO... animal" />
-            <marker date="1473945616000" expanded="true" signature="761:768" ph="SELECT a.ani... " />
-            <marker date="1473945616000" expanded="true" signature="761:800" ph="SELECT * FRO... animal" />
-            <marker date="1473945616000" expanded="true" signature="1025:1064" ph="SELECT * FRO... animal" />
-            <marker date="1473945616000" expanded="true" signature="1287:1326" ph="SELECT * FRO... animal" />
-            <marker date="1473945616000" expanded="true" signature="1546:1636" ph="INSERT INTO animal... " />
-            <marker date="1473945616000" expanded="true" signature="2001:2038" ph="DELETE FROM " />
-            <marker date="1473945616000" expanded="true" signature="2001:2040" ph="DELETE FROM " />
-            <marker date="1473945616000" expanded="true" signature="2254:2321" ph="UPDATE anima... " />
-            <marker date="1473945616000" expanded="true" signature="2254:2340" ph="UPDATE anima... " />
-            <marker date="1473945616000" expanded="true" signature="2771:3015" ph="SELECT a.nam... animal" />
-          </folding>
         </state>
       </provider>
     </entry>

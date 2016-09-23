@@ -27,7 +27,7 @@ public class AnimalRepositoryImpl implements AnimalRepository {
 
     @Override
     public ResultSet getAnimalByName(String name) throws SQLException {
-        PreparedStatement stmt = this.conn.prepareStatement("SELECT * FROM animal WHERE  name LIKE ?");
+        PreparedStatement stmt = this.conn.prepareStatement("SELECT * FROM animal WHERE name LIKE ?");
 
         stmt.setString(1, (name+"%"));
 
@@ -88,14 +88,11 @@ public class AnimalRepositoryImpl implements AnimalRepository {
         stmt.executeUpdate();
     }
 
-    @Override
-    public ResultSet getAnimalByNameWithType(String name) throws SQLException {
-        PreparedStatement stmt = this.conn.prepareStatement("SELECT a.name, at.animaltype, a.breed, a.description\n" +
-                "                FROM animal as a JOIN animaltypes as at\n" +
-                "                    ON a.species = at.animaltypesid\n" +
-                "WHERE name LIKE ?");
 
-        stmt.setString(1, (name+"%"));
+    public ResultSet getAnimalByNameWithType(String name) throws SQLException {
+        PreparedStatement stmt = this.conn.prepareStatement("SELECT a.name, at.animaltype, a.breed, a.description FROM animal as a JOIN animaltypes as at ON a.species = at.animaltypesid WHERE name LIKE ?");
+
+        stmt.setString(1, (name + "%"));
 
         return stmt.executeQuery();
     }
