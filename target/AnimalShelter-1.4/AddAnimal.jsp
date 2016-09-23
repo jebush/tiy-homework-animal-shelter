@@ -12,8 +12,6 @@
         <li><a href="ListAnimal.jsp" target="_self">List Animals</a></li>
 
         <li><a href="AddAnimal.jsp" target="_parent">Add an Animal</a></li>
-
-        <li><a href="AnimalNotes.jsp" target="_parent">Animal Notes</a></li>
     </ul>
 </div>
 
@@ -21,7 +19,7 @@
 
 <h2>Add / Edit an Animals</h2>
 <div>
-    <form action="https://tiy-test-form-target.herokuapp.com/post" method="post" enctype="multipart/form-data">
+    <form action="ListAnimal.jsp" method="post" enctype="multipart/form-data">
         <p>* indicates a required field</p>
 
         <label>Name*:</label>

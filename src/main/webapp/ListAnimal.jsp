@@ -12,8 +12,6 @@
         <li><a href="ListAnimal.jsp" target="_self">List Animals</a></li>
 
         <li><a href="AddAnimal.jsp" target="_parent">Add an Animal</a></li>
-
-        <li><a href="AnimalNotes.jsp" target="_parent">Animal Notes</a></li>
     </ul>
 </div>
 
@@ -22,7 +20,7 @@
 
 <h2>List Animals</h2>
 <div>
-    <form id="searchForm" action="https://tiy-test-form-target.herokuapp.com/post" method="post" enctype="multipart/form-data">
+    <form id="searchForm" action="ListAnimal.jsp" method="post" enctype="multipart/form-data">
         <p>Search for an animal:</p>
         <input name="name" type="text" placeholder="Name" >
 
@@ -49,11 +47,11 @@
 
     <div class="AnimalStats">
         <ul class="animalDisplay">
-            <h3><a href="">Bob</a></h3>
+            <h3><a href="AddAnimal.jsp">Bob</a></h3>
             <li><strong>Type</strong>: Cat</li>
             <li><strong>Breed</strong>: Tabby</li>
             <li><strong>Description</strong>: Big fat and fuzzy</li>
-            <li><strong>Notes</strong>: 5 notes</li>
+            <li><strong>Notes</strong>: <a href="AnimalNotes.jsp">1</a> notes</li>
         </ul>
     </div>
 
@@ -68,11 +66,11 @@
 
     <div class="AnimalStats">
         <ul class="animalDisplay">
-            <h3><a href="">Wanda</a></h3>
+            <h3><a href="AddAnimal.jsp">Wanda</a></h3>
             <li><strong>Type</strong>: Dog</li>
             <li><strong>Breed</strong>: Bulldog</li>
             <li><strong>Description</strong>: A handsome beast</li>
-            <li><strong>Notes</strong>: 3 notes</li>
+            <li><strong>Notes</strong>: <a href="AnimalNotes.jsp">1</a> notes</li>
         </ul>
     </div>
 
@@ -87,11 +85,11 @@
 
     <div class="AnimalStats">
         <ul class="animalDisplay">
-            <h3><a href="">Peter Parker</a></h3>
+            <h3><a href="AddAnimal.jsp">Peter Parker</a></h3>
             <li><strong>Type</strong>: Spider</li>
             <li><strong>Breed</strong>: Trantula</li>
             <li><strong>Description</strong>: Seriously, who gets a pet spider?!</li>
-            <li><strong>Notes</strong>: 0 notes</li>
+            <li><strong>Notes</strong>: <a href="AnimalNotes.jsp">1</a> notes</li>
         </ul>
     </div>
 
@@ -106,11 +104,11 @@
 
     <div class="AnimalStats">
         <ul class="animalDisplay">
-            <h3><a href="">Roger</a></h3>
+            <h3><a href="AddAnimal.jsp">Roger</a></h3>
             <li><strong>Type</strong>: Fish</li>
             <li><strong>Breed</strong>: Goldfish</li>
             <li><strong>Description</strong>: It's orange.</li>
-            <li><strong>Notes</strong>: 1 notes</li>
+            <li><strong>Notes</strong>: <a href="AnimalNotes.jsp">1</a> notes</li>
         </ul>
     </div>
 

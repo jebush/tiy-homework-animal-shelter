@@ -12,8 +12,6 @@
         <li><a href="ListAnimal.jsp" target="_self">List Animals</a></li>
 
         <li><a href="AddAnimal.jsp" target="_parent">Add an Animal</a></li>
-
-        <li><a href="AnimalNotes.jsp" target="_parent">Animal Notes</a></li>
     </ul>
 </div>
 
@@ -27,7 +25,7 @@
     </div>
     <div>
         <ul>
-            <h3><a href="">Bob</a></h3>
+            <h3><a href="AddAnimal.jsp">Bob</a></h3>
             <li><strong>Type</strong>: Cat</li>
             <li><strong>Breed</strong>: Tabby</li>
             <li><strong>Description</strong>: Big fat and fuzzy</li>
@@ -37,12 +35,12 @@
 
 <div class="notes">
     Date    note
-    <br />8/29/16 Went to visit vet
-    <br />8/30/16 Only eat filet mignon
+    <br />8/29/16 Went to visit vet <button href="AnimalNotes.jsp">Delete Note</button>
+    <br />8/30/16 Only eat filet mignon <button href="AnimalNotes.jsp">Delete Note</button>
 </div>
 
 <div>
-    <form action="https://tiy-test-form-target.herokuapp.com/post" method="post" enctype="multipart/form-data">
+    <form action="AnimalNotes.jsp" method="post" enctype="multipart/form-data">
 
         <label>Add a note:</label>
         <br />
